@@ -1,0 +1,395 @@
+{
+  "name": "@gg-utils/worktree-kit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reusable worktree stack command/config primitives for project-owned worktrees.config.ts adapters.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./slot-ports": {
+      "types": "./src/slot-ports.ts",
+      "default": "./src/slot-ports.ts"
+    },
+    "./configured-submodules": {
+      "types": "./src/configured-submodules.ts",
+      "default": "./src/configured-submodules.ts"
+    },
+    "./interactive-session": {
+      "types": "./src/interactive-session.ts",
+      "default": "./src/interactive-session.ts"
+    },
+    "./interactive-worktrees": {
+      "types": "./src/interactive-worktrees.ts",
+      "default": "./src/interactive-worktrees.ts"
+    },
+    "./interactive-paths": {
+      "types": "./src/interactive-paths.ts",
+      "default": "./src/interactive-paths.ts"
+    },
+    "./local-state-sync": {
+      "types": "./src/local-state-sync.ts",
+      "default": "./src/local-state-sync.ts"
+    },
+    "./env-file": {
+      "types": "./src/env-file.ts",
+      "default": "./src/env-file.ts"
+    },
+    "./create-cli-context": {
+      "types": "./src/create-cli-context.ts",
+      "default": "./src/create-cli-context.ts"
+    },
+    "./create-command": {
+      "types": "./src/create-command.ts",
+      "default": "./src/create-command.ts"
+    },
+    "./create-preflight-validation": {
+      "types": "./src/create-preflight-validation.ts",
+      "default": "./src/create-preflight-validation.ts"
+    },
+    "./create-realm-and-git": {
+      "types": "./src/create-realm-and-git.ts",
+      "default": "./src/create-realm-and-git.ts"
+    },
+    "./create-env-orchestration": {
+      "types": "./src/create-env-orchestration.ts",
+      "default": "./src/create-env-orchestration.ts"
+    },
+    "./create-post-provision": {
+      "types": "./src/create-post-provision.ts",
+      "default": "./src/create-post-provision.ts"
+    },
+    "./codex-project-integration": {
+      "types": "./src/codex-project-integration.ts",
+      "default": "./src/codex-project-integration.ts"
+    },
+    "./sync-local-workspaces": {
+      "types": "./src/sync-local-workspaces.ts",
+      "default": "./src/sync-local-workspaces.ts"
+    },
+    "./state-check": {
+      "types": "./src/state-check.ts",
+      "default": "./src/state-check.ts"
+    },
+    "./memory-monitor": {
+      "types": "./src/memory-monitor.ts",
+      "default": "./src/memory-monitor.ts"
+    },
+    "./repo-root-sync": {
+      "types": "./src/repo-root-sync.ts",
+      "default": "./src/repo-root-sync.ts"
+    },
+    "./switch-command": {
+      "types": "./src/switch-command.ts",
+      "default": "./src/switch-command.ts"
+    },
+    "./destroy-command": {
+      "types": "./src/destroy-command.ts",
+      "default": "./src/destroy-command.ts"
+    },
+    "./env-doctor-command": {
+      "types": "./src/env-doctor-command.ts",
+      "default": "./src/env-doctor-command.ts"
+    },
+    "./package.json": "./package.json",
+    "./repair-command": {
+      "types": "./src/repair-command.ts",
+      "default": "./src/repair-command.ts"
+    },
+    "./update-from-main-command": {
+      "types": "./src/update-from-main-command.ts",
+      "default": "./src/update-from-main-command.ts"
+    },
+    "./merge-command": {
+      "types": "./src/merge-command.ts",
+      "default": "./src/merge-command.ts"
+    },
+    "./align-active": {
+      "types": "./src/align-active.ts",
+      "default": "./src/align-active.ts"
+    },
+    "./align-active-command": {
+      "types": "./src/align-active-command.ts",
+      "default": "./src/align-active-command.ts"
+    },
+    "./align-active-parallel-command": {
+      "types": "./src/align-active-parallel-command.ts",
+      "default": "./src/align-active-parallel-command.ts"
+    },
+    "./start-command": {
+      "types": "./src/start-command.ts",
+      "default": "./src/start-command.ts"
+    },
+    "./antigravity-project-integration": {
+      "types": "./src/antigravity-project-integration.ts",
+      "default": "./src/antigravity-project-integration.ts"
+    },
+    "./zsh-aliases-integration": {
+      "types": "./src/zsh-aliases-integration.ts",
+      "default": "./src/zsh-aliases-integration.ts"
+    },
+    "./dev-compatibility": {
+      "types": "./src/dev-compatibility.ts",
+      "default": "./src/dev-compatibility.ts"
+    },
+    "./configured-create-command": {
+      "types": "./src/configured-create-command.ts",
+      "default": "./src/configured-create-command.ts"
+    },
+    "./ui-command-catalog": {
+      "types": "./src/ui-command-catalog.ts",
+      "default": "./src/ui-command-catalog.ts"
+    },
+    "./opentui-shell-contracts": {
+      "types": "./src/opentui-shell-contracts.ts",
+      "default": "./src/opentui-shell-contracts.ts"
+    },
+    "./opentui-shell-keyboard": {
+      "types": "./src/opentui-shell-keyboard.ts",
+      "default": "./src/opentui-shell-keyboard.ts"
+    },
+    "./opentui-shell-menu-actions": {
+      "types": "./src/opentui-shell-menu-actions.ts",
+      "default": "./src/opentui-shell-menu-actions.ts"
+    },
+    "./opentui-action-scroll-npm-plans": {
+      "types": "./src/opentui-action-scroll-npm-plans.ts",
+      "default": "./src/opentui-action-scroll-npm-plans.ts"
+    },
+    "./opentui-action-scroll-worktree-pick": {
+      "types": "./src/opentui-action-scroll-worktree-pick.ts",
+      "default": "./src/opentui-action-scroll-worktree-pick.ts"
+    },
+    "./opentui-action-scroll-global-plans": {
+      "types": "./src/opentui-action-scroll-global-plans.ts",
+      "default": "./src/opentui-action-scroll-global-plans.ts"
+    },
+    "./opentui-action-scroll-switch-plans": {
+      "types": "./src/opentui-action-scroll-switch-plans.ts",
+      "default": "./src/opentui-action-scroll-switch-plans.ts"
+    },
+    "./opentui-action-scroll-diagnostics-pool-plans": {
+      "types": "./src/opentui-action-scroll-diagnostics-pool-plans.ts",
+      "default": "./src/opentui-action-scroll-diagnostics-pool-plans.ts"
+    },
+    "./interactive-flows": {
+      "types": "./src/interactive-flows.ts",
+      "default": "./src/interactive-flows.ts"
+    },
+    "./ink-launch-options": {
+      "types": "./src/ink-launch-options.ts",
+      "default": "./src/ink-launch-options.ts"
+    },
+    "./ink-entrypoint": {
+      "types": "./src/ink-entrypoint.ts",
+      "default": "./src/ink-entrypoint.ts"
+    },
+    "./ink-launch-resolution": {
+      "types": "./src/ink-launch-resolution.ts",
+      "default": "./src/ink-launch-resolution.ts"
+    },
+    "./ink-create-model": {
+      "types": "./src/ink-create-model.ts",
+      "default": "./src/ink-create-model.ts"
+    },
+    "./ink-action-plan-dispatcher": {
+      "types": "./src/ink-action-plan-dispatcher.ts",
+      "default": "./src/ink-action-plan-dispatcher.ts"
+    },
+    "./ink-action-catalog": {
+      "types": "./src/ink-action-catalog.ts",
+      "default": "./src/ink-action-catalog.ts"
+    },
+    "./ink-reducer": {
+      "types": "./src/ink-reducer.ts",
+      "default": "./src/ink-reducer.ts"
+    },
+    "./ink-reducer-helpers": {
+      "types": "./src/ink-reducer-helpers.ts",
+      "default": "./src/ink-reducer-helpers.ts"
+    },
+    "./ink-display-view-model": {
+      "types": "./src/ink-display-view-model.ts",
+      "default": "./src/ink-display-view-model.ts"
+    },
+    "./ink-keyboard-routing": {
+      "types": "./src/ink-keyboard-routing.ts",
+      "default": "./src/ink-keyboard-routing.ts"
+    },
+    "./ink-ui-contracts": {
+      "types": "./src/ink-ui-contracts.ts",
+      "default": "./src/ink-ui-contracts.ts"
+    },
+    "./ink-inventory-discovery": {
+      "types": "./src/ink-inventory-discovery.ts",
+      "default": "./src/ink-inventory-discovery.ts"
+    },
+    "./ink-record-workflow-plans": {
+      "types": "./src/ink-record-workflow-plans.ts",
+      "default": "./src/ink-record-workflow-plans.ts"
+    },
+    "./ink-admin-task-plans": {
+      "types": "./src/ink-admin-task-plans.ts",
+      "default": "./src/ink-admin-task-plans.ts"
+    },
+    "./ink-create-switch-plans": {
+      "types": "./src/ink-create-switch-plans.ts",
+      "default": "./src/ink-create-switch-plans.ts"
+    },
+    "./ink-create-resolution": {
+      "types": "./src/ink-create-resolution.ts",
+      "default": "./src/ink-create-resolution.ts"
+    },
+    "./ink-result-model": {
+      "types": "./src/ink-result-model.ts",
+      "default": "./src/ink-result-model.ts"
+    },
+    "./ink-bridge": {
+      "types": "./src/ink-bridge.ts",
+      "default": "./src/ink-bridge.ts"
+    },
+    "./ink-shell-view-model": {
+      "types": "./src/ink-shell-view-model.ts",
+      "default": "./src/ink-shell-view-model.ts"
+    },
+    "./ink-fullscreen-view-model": {
+      "types": "./src/ink-fullscreen-view-model.ts",
+      "default": "./src/ink-fullscreen-view-model.ts"
+    },
+    "./opentui-create-wizard-form-plans": {
+      "types": "./src/opentui-create-wizard-form-plans.ts",
+      "default": "./src/opentui-create-wizard-form-plans.ts"
+    },
+    "./opentui-create-wizard-panels": {
+      "types": "./src/opentui-create-wizard-panels.tsx",
+      "default": "./src/opentui-create-wizard-panels.tsx"
+    },
+    "./opentui-create-preview": {
+      "types": "./src/opentui-create-preview.ts",
+      "default": "./src/opentui-create-preview.ts"
+    },
+    "./opentui-action-scroll-maintenance-plans": {
+      "types": "./src/opentui-action-scroll-maintenance-plans.ts",
+      "default": "./src/opentui-action-scroll-maintenance-plans.ts"
+    },
+    "./opentui-app-shell-view-model": {
+      "types": "./src/opentui-app-shell-view-model.ts",
+      "default": "./src/opentui-app-shell-view-model.ts"
+    },
+    "./opentui-app-shell-panels": {
+      "types": "./src/opentui-app-shell-panels.tsx",
+      "default": "./src/opentui-app-shell-panels.tsx"
+    },
+    "./opentui-app-run-lifecycle": {
+      "types": "./src/opentui-app-run-lifecycle.ts",
+      "default": "./src/opentui-app-run-lifecycle.ts"
+    },
+    "./opentui-child-process": {
+      "types": "./src/opentui-child-process.ts",
+      "default": "./src/opentui-child-process.ts"
+    },
+    "./opentui-app-controller": {
+      "types": "./src/opentui-app-controller.ts",
+      "default": "./src/opentui-app-controller.ts"
+    },
+    "./opentui-shell-serializers": {
+      "types": "./src/opentui-shell-serializers.ts",
+      "default": "./src/opentui-shell-serializers.ts"
+    },
+    "./ink-action-options-panel": {
+      "types": "./src/ink-action-options-panel.tsx",
+      "default": "./src/ink-action-options-panel.tsx"
+    },
+    "./ink-issue-line": {
+      "types": "./src/ink-issue-line.tsx",
+      "default": "./src/ink-issue-line.tsx"
+    },
+    "./ink-fullscreen-screens": {
+      "types": "./src/ink-fullscreen-screens.tsx",
+      "default": "./src/ink-fullscreen-screens.tsx"
+    },
+    "./ink-shell": {
+      "types": "./src/ink-shell.tsx",
+      "default": "./src/ink-shell.tsx"
+    },
+    "./ink-app": {
+      "types": "./src/ink-app.tsx",
+      "default": "./src/ink-app.tsx"
+    },
+    "./opentui-auto-focus-tab-select": {
+      "types": "./src/opentui-auto-focus-tab-select.tsx",
+      "default": "./src/opentui-auto-focus-tab-select.tsx"
+    },
+    "./opentui-layout-test-harness": {
+      "types": "./src/opentui-layout-test-harness.tsx",
+      "default": "./src/opentui-layout-test-harness.tsx"
+    },
+    "./opentui-diagnostics-pool-panel": {
+      "types": "./src/opentui-diagnostics-pool-panel.tsx",
+      "default": "./src/opentui-diagnostics-pool-panel.tsx"
+    },
+    "./opentui-maintenance-panels": {
+      "types": "./src/opentui-maintenance-panels.tsx",
+      "default": "./src/opentui-maintenance-panels.tsx"
+    },
+    "./opentui-npm-panels": {
+      "types": "./src/opentui-npm-panels.tsx",
+      "default": "./src/opentui-npm-panels.tsx"
+    },
+    "./opentui-global-panels": {
+      "types": "./src/opentui-global-panels.tsx",
+      "default": "./src/opentui-global-panels.tsx"
+    },
+    "./opentui-worktree-pick-panel": {
+      "types": "./src/opentui-worktree-pick-panel.tsx",
+      "default": "./src/opentui-worktree-pick-panel.tsx"
+    },
+    "./opentui-switch-panel": {
+      "types": "./src/opentui-switch-panel.tsx",
+      "default": "./src/opentui-switch-panel.tsx"
+    },
+    "./opentui-action-scroll": {
+      "types": "./src/opentui-action-scroll.tsx",
+      "default": "./src/opentui-action-scroll.tsx"
+    },
+    "./opentui-app-shell": {
+      "types": "./src/opentui-app-shell.tsx",
+      "default": "./src/opentui-app-shell.tsx"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "!src/**/*.unit.test.ts",
+    "README.md",
+    "tsconfig.json",
+    "tsconfig.build.json"
+  ],
+  "engines": {
+    "node": ">=24.11.1 <25",
+    "npm": ">=9.0.0"
+  },
+  "packageManager": "npm@11.12.1",
+  "dependencies": {
+    "@gg-utils/env-materialize-core": "git+https://github.com/gg-utils/env-materialize-core.git#main",
+    "@opentui/core": "^0.1.90",
+    "@opentui/react": "^0.1.90",
+    "@gg-utils/worktree-core": "git+https://github.com/gg-utils/worktree-core.git#main",
+    "ink": "^6.8.0",
+    "react": "^19.2.0"
+  },
+  "scripts": {
+    "build": "node ../../node_modules/typescript/bin/tsc -p tsconfig.build.json",
+    "type-check": "node ../../node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
+    "test": "node ../../node_modules/tsx/dist/cli.mjs --test \"src/**/*.unit.test.ts\""
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0"
+  }
+}

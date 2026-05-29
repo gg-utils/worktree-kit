@@ -1,0 +1,432 @@
+/**
+ * @fileoverview Reusable create/switch form catalogs for worktree Ink UIs.
+ *
+ * Form schema, default drafts, and field/section lookup helpers are product-neutral. Project UI
+ * adapters own inventory-derived defaults, filesystem previews, and command argv construction.
+ *
+ * @testing Node test: npm run worktree-kit:test
+ *
+ * @see packages/worktree-kit/src/ink-launch-options.ts - Launcher argv draft types (`WorktreeStackKit_InkCreateDraft`) that `WorktreeStackKit_createInitialInkCreateDraft` materializes for UI and argv hydration.
+ * @see packages/worktree-kit/src/ink-reducer.ts - Ink reducer that seeds interactive state from the initial create draft and consults the field catalogs while handling keyboard-driven edits.
+ * @see packages/worktree-kit/src/ink-create-model.unit.test.ts - Node regression tests for section/field catalogs, lookup helpers, and default draft shapes owned by this module.
+ * @documentation reviewed=2026-05-23 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
+ */
+
+import type { WorktreeStackKit_InkCreateDraft } from "./ink-launch-options.js";
+
+/** Field IDs for the create form. */
+export type WorktreeStackKit_InkCreateFieldId =
+  | "branchPrefix"
+  | "stackName"
+  | "slotInput"
+  | "baseBranch"
+  | "rootBranch"
+  | "submoduleBranch"
+  | "worktreesBase"
+  | "realmSlug"
+  | "worktreePathOverride"
+  | "metadataSource"
+  | "copyEnvFromMain"
+  | "runInstall"
+  | "installSkipExisting"
+  | "installPreferOnline"
+  | "openWindsurf"
+  | "followUpStart"
+  | "followUpStartOpenWindsurf";
+
+/** Section IDs for the create form. */
+export type WorktreeStackKit_InkCreateSectionId =
+  | "identity"
+  | "branches"
+  | "provisioning"
+  | "launch";
+
+/** Metadata describing one editable create-form control in the Ink UI. */
+export type WorktreeStackKit_InkCreateField = {
+  readonly description: string;
+  readonly id: WorktreeStackKit_InkCreateFieldId;
+  readonly kind: "text" | "boolean";
+  readonly label: string;
+  readonly sectionId: WorktreeStackKit_InkCreateSectionId;
+};
+
+/** Grouping header for related create fields shown in the section navigator. */
+export type WorktreeStackKit_InkCreateSection = {
+  readonly description: string;
+  readonly id: WorktreeStackKit_InkCreateSectionId;
+  readonly label: string;
+};
+
+/** Field IDs for the switch form. */
+export type WorktreeStackKit_InkSwitchFieldId =
+  | "branchPrefix"
+  | "stackName"
+  | "environmentFilter";
+
+/** Section IDs for the switch form. */
+export type WorktreeStackKit_InkSwitchSectionId = "identity" | "filter";
+
+/** Draft fields for the worktree switch form. */
+export type WorktreeStackKit_InkSwitchFormDraft = {
+  readonly branchPrefix: string;
+  readonly environmentFilter: string;
+  readonly stackName: string;
+};
+
+/** Metadata for one switch-form control in the Ink UI. */
+export type WorktreeStackKit_InkSwitchField = {
+  readonly description: string;
+  readonly id: WorktreeStackKit_InkSwitchFieldId;
+  readonly kind: "text" | "boolean";
+  readonly label: string;
+  readonly sectionId: WorktreeStackKit_InkSwitchSectionId;
+};
+
+/** Section grouping for switch-form navigation. */
+export type WorktreeStackKit_InkSwitchSection = {
+  readonly description: string;
+  readonly id: WorktreeStackKit_InkSwitchSectionId;
+  readonly label: string;
+};
+
+/** Ordered Ink create wizard sections shown in the left column. */
+export const WORKTREE_STACK_KIT_INK_CREATE_SECTIONS: readonly WorktreeStackKit_InkCreateSection[] =
+  [
+    {
+      id: "identity",
+      label: "Identity & Location",
+      description: "Name, port slot, and folder location",
+    },
+    {
+      id: "branches",
+      label: "Git Branches",
+      description: "Customize branch names or use defaults",
+    },
+    {
+      id: "provisioning",
+      label: "Dependencies",
+      description: "Install and environment options",
+    },
+    {
+      id: "launch",
+      label: "Post-Create",
+      description: "Auto-open tools and start environment",
+    },
+  ];
+
+/** Flat field catalog driving prompts, validation, and argv translation for create. */
+export const WORKTREE_STACK_KIT_INK_CREATE_FIELDS: readonly WorktreeStackKit_InkCreateField[] =
+  [
+    {
+      id: "branchPrefix",
+      sectionId: "identity",
+      label: "Branch Prefix",
+      kind: "text",
+      description: "Git branch prefix (e.g., codex, claude). Default: codex",
+    },
+    {
+      id: "stackName",
+      sectionId: "identity",
+      label: "Stack Name",
+      kind: "text",
+      description:
+        "Short identifier for this work (used in branches and folder names)",
+    },
+    {
+      id: "slotInput",
+      sectionId: "identity",
+      label: "Port Slot",
+      kind: "text",
+      description: "Leave blank to auto-assign the next available port",
+    },
+    {
+      id: "worktreesBase",
+      sectionId: "identity",
+      label: "Parent Folder",
+      kind: "text",
+      description: "Where to create the new worktree folder",
+    },
+    {
+      id: "realmSlug",
+      sectionId: "identity",
+      label: "Realm (optional)",
+      kind: "text",
+      description: "Custom realm name, or leave blank for auto-assignment",
+    },
+    {
+      id: "worktreePathOverride",
+      sectionId: "identity",
+      label: "Custom Path (optional)",
+      kind: "text",
+      description: "Override the default worktree location",
+    },
+    {
+      id: "metadataSource",
+      sectionId: "identity",
+      label: "Source Tag (optional)",
+      kind: "text",
+      description: "Optional source label for generated worktree metadata",
+    },
+    {
+      id: "baseBranch",
+      sectionId: "branches",
+      label: "Base Branch",
+      kind: "text",
+      description: "Branch to create the new worktree from",
+    },
+    {
+      id: "rootBranch",
+      sectionId: "branches",
+      label: "Root Repo Branch",
+      kind: "text",
+      description: "Default: {prefix}/{stack}",
+    },
+    {
+      id: "submoduleBranch",
+      sectionId: "branches",
+      label: "Submodule Branch",
+      kind: "text",
+      description: "Default: {prefix}/{stack}",
+    },
+    {
+      id: "copyEnvFromMain",
+      sectionId: "provisioning",
+      label: "Copy .env From Main (legacy)",
+      kind: "boolean",
+      description:
+        "Deprecated legacy env copy; prefer configured env materialization",
+    },
+    {
+      id: "runInstall",
+      sectionId: "provisioning",
+      label: "Install Dependencies",
+      kind: "boolean",
+      description: "Run dependency installation after setup",
+    },
+    {
+      id: "installSkipExisting",
+      sectionId: "provisioning",
+      label: "Skip Existing Packages",
+      kind: "boolean",
+      description: "Skip packages already present on disk",
+    },
+    {
+      id: "installPreferOnline",
+      sectionId: "provisioning",
+      label: "Prefer Online Packages",
+      kind: "boolean",
+      description: "Use network resolution instead of cache-first installation",
+    },
+    {
+      id: "openWindsurf",
+      sectionId: "launch",
+      label: "Open in Windsurf",
+      kind: "boolean",
+      description: "Opt into launching Windsurf when done",
+    },
+    {
+      id: "followUpStart",
+      sectionId: "launch",
+      label: "Start Environment",
+      kind: "boolean",
+      description: "Auto-start the local environment after creation",
+    },
+    {
+      id: "followUpStartOpenWindsurf",
+      sectionId: "launch",
+      label: "Also Open Windsurf",
+      kind: "boolean",
+      description: "Opt into launching Windsurf when starting environment",
+    },
+  ];
+
+/** Ordered switch wizard sections. */
+export const WORKTREE_STACK_KIT_INK_SWITCH_SECTIONS: readonly WorktreeStackKit_InkSwitchSection[] =
+  [
+    {
+      id: "identity",
+      label: "Identity",
+      description: "Branch prefix and stack name",
+    },
+    {
+      id: "filter",
+      label: "Filter",
+      description: "Environment/realm filtering",
+    },
+  ];
+
+/** Flat catalog of switch fields used for prompts and argv translation. */
+export const WORKTREE_STACK_KIT_INK_SWITCH_FIELDS: readonly WorktreeStackKit_InkSwitchField[] =
+  [
+    {
+      id: "branchPrefix",
+      sectionId: "identity",
+      label: "Branch Prefix",
+      kind: "text",
+      description: "Git branch prefix (e.g., codex, claude). Default: codex",
+    },
+    {
+      id: "stackName",
+      sectionId: "identity",
+      label: "Stack Name",
+      kind: "text",
+      description: "Short identifier for the worktree",
+    },
+    {
+      id: "environmentFilter",
+      sectionId: "filter",
+      label: "Environment Filter",
+      kind: "text",
+      description: "Filter worktrees by realm slug (e.g., worktree-01)",
+    },
+  ];
+
+/** Default create draft before user edits or argv hydration. */
+export function WorktreeStackKit_createInitialInkCreateDraft(): WorktreeStackKit_InkCreateDraft {
+  return {
+    branchPrefix: "",
+    stackName: "",
+    slotInput: "",
+    baseBranch: "",
+    rootBranch: "",
+    submoduleBranch: "",
+    worktreesBase: "",
+    realmSlug: "",
+    worktreePathOverride: "",
+    metadataSource: "",
+    copyEnvFromMain: false,
+    runInstall: true,
+    installSkipExisting: true,
+    installPreferOnline: false,
+    openWindsurf: false,
+    followUpStart: false,
+    followUpStartOpenWindsurf: false,
+  };
+}
+
+/** Returns the create field definition at `index` or `null` when out of range. */
+export function WorktreeStackKit_getInkCreateField(
+  index: number,
+): WorktreeStackKit_InkCreateField | null {
+  return WORKTREE_STACK_KIT_INK_CREATE_FIELDS[index] ?? null;
+}
+
+/** Index of `fieldId` inside `WORKTREE_STACK_KIT_INK_CREATE_FIELDS` (or `-1` when unknown). */
+export function WorktreeStackKit_getInkCreateFieldIndex(
+  fieldId: WorktreeStackKit_InkCreateFieldId,
+): number {
+  return WORKTREE_STACK_KIT_INK_CREATE_FIELDS.findIndex(
+    (field) => field.id === fieldId,
+  );
+}
+
+/** Returns the create section definition at `index` or `null` when out of range. */
+export function WorktreeStackKit_getInkCreateSection(
+  index: number,
+): WorktreeStackKit_InkCreateSection | null {
+  return WORKTREE_STACK_KIT_INK_CREATE_SECTIONS[index] ?? null;
+}
+
+/** Index of `sectionId` inside `WORKTREE_STACK_KIT_INK_CREATE_SECTIONS` (or `-1`). */
+export function WorktreeStackKit_getInkCreateSectionIndex(
+  sectionId: WorktreeStackKit_InkCreateSectionId,
+): number {
+  return WORKTREE_STACK_KIT_INK_CREATE_SECTIONS.findIndex(
+    (section) => section.id === sectionId,
+  );
+}
+
+/** Resolves the parent section for a field id, or `null` when the field is missing. */
+export function WorktreeStackKit_getInkCreateSectionForField(
+  fieldId: WorktreeStackKit_InkCreateFieldId,
+): WorktreeStackKit_InkCreateSection | null {
+  const field = WORKTREE_STACK_KIT_INK_CREATE_FIELDS.find(
+    (item) => item.id === fieldId,
+  );
+  if (!field) {
+    return null;
+  }
+
+  return (
+    WORKTREE_STACK_KIT_INK_CREATE_SECTIONS.find(
+      (section) => section.id === field.sectionId,
+    ) ?? null
+  );
+}
+
+/** Lists all field definitions belonging to a section id. */
+export function WorktreeStackKit_getInkCreateFieldsForSection(
+  sectionId: WorktreeStackKit_InkCreateSectionId,
+): readonly WorktreeStackKit_InkCreateField[] {
+  return WORKTREE_STACK_KIT_INK_CREATE_FIELDS.filter(
+    (field) => field.sectionId === sectionId,
+  );
+}
+
+/** Returns whether `fieldId` refers to a boolean toggle in the create form schema. */
+export function WorktreeStackKit_isInkCreateBooleanField(
+  fieldId: WorktreeStackKit_InkCreateFieldId,
+): boolean {
+  return WORKTREE_STACK_KIT_INK_CREATE_FIELDS.some(
+    (field) => field.id === fieldId && field.kind === "boolean",
+  );
+}
+
+/** Default switch draft prior to user edits. */
+export function WorktreeStackKit_createInitialInkSwitchDraft(): WorktreeStackKit_InkSwitchFormDraft {
+  return {
+    branchPrefix: "",
+    stackName: "",
+    environmentFilter: "",
+  };
+}
+
+/** Returns the switch field at `index` or `null` when out of range. */
+export function WorktreeStackKit_getInkSwitchField(
+  index: number,
+): WorktreeStackKit_InkSwitchField | null {
+  return WORKTREE_STACK_KIT_INK_SWITCH_FIELDS[index] ?? null;
+}
+
+/** Index of `fieldId` inside `WORKTREE_STACK_KIT_INK_SWITCH_FIELDS` (or `-1`). */
+export function WorktreeStackKit_getInkSwitchFieldIndex(
+  fieldId: WorktreeStackKit_InkSwitchFieldId,
+): number {
+  return WORKTREE_STACK_KIT_INK_SWITCH_FIELDS.findIndex(
+    (field) => field.id === fieldId,
+  );
+}
+
+/** Returns the switch section at `index` or `null` when out of range. */
+export function WorktreeStackKit_getInkSwitchSection(
+  index: number,
+): WorktreeStackKit_InkSwitchSection | null {
+  return WORKTREE_STACK_KIT_INK_SWITCH_SECTIONS[index] ?? null;
+}
+
+/** Index of `sectionId` inside `WORKTREE_STACK_KIT_INK_SWITCH_SECTIONS` (or `-1`). */
+export function WorktreeStackKit_getInkSwitchSectionIndex(
+  sectionId: WorktreeStackKit_InkSwitchSectionId,
+): number {
+  return WORKTREE_STACK_KIT_INK_SWITCH_SECTIONS.findIndex(
+    (section) => section.id === sectionId,
+  );
+}
+
+/** Lists switch fields that belong to `sectionId`. */
+export function WorktreeStackKit_getInkSwitchFieldsForSection(
+  sectionId: WorktreeStackKit_InkSwitchSectionId,
+): readonly WorktreeStackKit_InkSwitchField[] {
+  return WORKTREE_STACK_KIT_INK_SWITCH_FIELDS.filter(
+    (field) => field.sectionId === sectionId,
+  );
+}
+
+/** Returns whether `fieldId` refers to a boolean switch field. */
+export function WorktreeStackKit_isInkSwitchBooleanField(
+  fieldId: WorktreeStackKit_InkSwitchFieldId,
+): boolean {
+  return WORKTREE_STACK_KIT_INK_SWITCH_FIELDS.some(
+    (field) => field.id === fieldId && field.kind === "boolean",
+  );
+}
