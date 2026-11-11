@@ -53,4 +53,3 @@ export declare function WorktreeStackKit_printAntigravityProjectUsage(): void;
 export declare function WorktreeStackKit_parseAntigravityProjectCliArgs(argv: readonly string[]): WorktreeStackKit_AntigravityProjectCliOptions;
 /** CLI entrypoint that wires parsing to Antigravity/Gemini project-state mutation. */
 export declare function WorktreeStackKit_runAntigravityProjectCli(argv: readonly string[], env?: NodeJS.ProcessEnv, homeDir?: string): number;
-//# sourceMappingURL=antigravity-project-integration.d.ts.map

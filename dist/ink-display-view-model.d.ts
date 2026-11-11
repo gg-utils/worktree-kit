@@ -75,4 +75,3 @@ export declare function WorktreeStackKit_getInkCreateFieldDisplayValue(options: 
     readonly fieldId: WorktreeStackKit_InkCreateFieldId;
     readonly resolvedDraft: WorktreeStackKit_InkCreateDraft;
 }): string;
-//# sourceMappingURL=ink-display-view-model.d.ts.map

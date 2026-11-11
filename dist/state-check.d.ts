@@ -165,4 +165,3 @@ export declare function WorktreeStateCheck_buildRootRowFromState(state: Worktree
  */
 export declare function WorktreeStateCheck_buildSubmoduleRowFromState(submodule: WorktreeStateCheck_SubmoduleDefinition, state: WorktreeStateCheck_RepoState, prefix: string | undefined, context: WorktreeStateCheck_Context): WorktreeStateCheck_Row;
 export {};
-//# sourceMappingURL=state-check.d.ts.map

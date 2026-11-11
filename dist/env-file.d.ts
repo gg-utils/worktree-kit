@@ -63,4 +63,3 @@ export declare function WorktreeStackKit_normalizeOptionalArtifactPath(rawPath: 
 export declare function WorktreeStackKit_machineRootFromEnvFile(options: WorktreeStackKit_MachineRootFromEnvFileOptions): string;
 /** Syncs a configured allowlist of shared env keys from one workspace into another. */
 export declare function WorktreeStackKit_syncSharedEnvKeys(options: WorktreeStackKit_SyncSharedEnvKeysOptions): void;
-//# sourceMappingURL=env-file.d.ts.map

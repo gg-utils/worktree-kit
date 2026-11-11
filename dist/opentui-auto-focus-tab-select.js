@@ -58,4 +58,3 @@ export function WorktreeStackKit_OpenTuiAutoFocusTabSelect(props) {
     }, []);
     return _jsx("tab-select", { ...props, ref: ref });
 }
-//# sourceMappingURL=opentui-auto-focus-tab-select.js.map

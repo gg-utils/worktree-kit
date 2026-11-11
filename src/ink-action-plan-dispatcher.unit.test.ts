@@ -158,7 +158,7 @@ function createBuilders(events: string[]): WorktreeStackKit_InkActionPlanDispatc
   };
 }
 
-test("WorktreeStackKit_buildInkActionPlan routes direct action families", () => {
+void test("WorktreeStackKit_buildInkActionPlan routes direct action families", () => {
   const events: string[] = [];
 
   WorktreeStackKit_buildInkActionPlan({
@@ -173,7 +173,7 @@ test("WorktreeStackKit_buildInkActionPlan routes direct action families", () => 
   assert.deepEqual(events, ["merge"]);
 });
 
-test("WorktreeStackKit_buildInkActionPlan merges interactive switch overrides", () => {
+void test("WorktreeStackKit_buildInkActionPlan merges interactive switch overrides", () => {
   const events: string[] = [];
 
   WorktreeStackKit_buildInkActionPlan({
@@ -189,7 +189,7 @@ test("WorktreeStackKit_buildInkActionPlan merges interactive switch overrides", 
   assert.deepEqual(events, ["switch-interactive:stack-a"]);
 });
 
-test("WorktreeStackKit_buildInkActionPlan routes utility and global actions", () => {
+void test("WorktreeStackKit_buildInkActionPlan routes utility and global actions", () => {
   const events: string[] = [];
   const builders = createBuilders(events);
 
@@ -213,7 +213,7 @@ test("WorktreeStackKit_buildInkActionPlan routes utility and global actions", ()
   assert.deepEqual(events, ["pool:realm-pool-guide", "global:healthcheck"]);
 });
 
-test("WorktreeStackKit_createInkActionPlanDispatcher binds builders for adapters", () => {
+void test("WorktreeStackKit_createInkActionPlanDispatcher binds builders for adapters", () => {
   const events: string[] = [];
   const buildActionPlan = WorktreeStackKit_createInkActionPlanDispatcher(
     createBuilders(events),

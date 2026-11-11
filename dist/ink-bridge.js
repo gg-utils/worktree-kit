@@ -297,4 +297,3 @@ export function WorktreeStackKit_startInkRuntimeProcess(options) {
         },
     };
 }
-//# sourceMappingURL=ink-bridge.js.map

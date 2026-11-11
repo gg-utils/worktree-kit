@@ -24,4 +24,3 @@ export function WorktreeStackKit_deriveSlotPortMap(options) {
     }
     return portsByKey;
 }
-//# sourceMappingURL=slot-ports.js.map

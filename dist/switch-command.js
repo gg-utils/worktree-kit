@@ -14,6 +14,7 @@
  */
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
+import path from "node:path";
 import { WORKTREE_STACK_DEFAULT_BRANCH_PREFIX, WORKTREE_STACK_EDITOR_LAUNCH_MAP, WORKTREE_STACK_KNOWN_PREFIXES, worktreeStackBuildBranchName, worktreeStackExtractBranchPrefix, worktreeStackIsKnownPrefix, worktreeStackNormalizeBranchPrefix, } from "@gg-utils/worktree-core/prefix";
 import { worktreeStackError, worktreeStackInfo, worktreeStackRunCommand, } from "@gg-utils/worktree-core/foundation";
 import { worktreeStackListPreparedWorktrees, worktreeStackMetadataPathForWorktree, worktreeStackPrimaryWorktreePath, } from "@gg-utils/worktree-core/worktree-discovery";
@@ -314,4 +315,3 @@ function WorktreeStackKit_launchInteractiveSwitchPicker(options) {
         stdio: "inherit",
     });
 }
-//# sourceMappingURL=switch-command.js.map

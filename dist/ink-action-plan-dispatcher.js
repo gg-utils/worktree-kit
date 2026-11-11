@@ -77,4 +77,3 @@ export function WorktreeStackKit_buildInkActionPlan(options) {
 export function WorktreeStackKit_createInkActionPlanDispatcher(builders) {
     return (options) => WorktreeStackKit_buildInkActionPlan({ ...options, builders });
 }
-//# sourceMappingURL=ink-action-plan-dispatcher.js.map

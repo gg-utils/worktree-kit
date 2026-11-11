@@ -22,7 +22,7 @@ import {
   WorktreeStackKit_pickNextInteractiveSlot,
 } from "./interactive-worktrees.js";
 
-test("WorktreeStackKit_parseInteractiveGitWorktreeListPorcelain excludes the repo root", () => {
+void test("WorktreeStackKit_parseInteractiveGitWorktreeListPorcelain excludes the repo root", () => {
   assert.deepEqual(
     WorktreeStackKit_parseInteractiveGitWorktreeListPorcelain(
       [
@@ -42,7 +42,7 @@ test("WorktreeStackKit_parseInteractiveGitWorktreeListPorcelain excludes the rep
   );
 });
 
-test("WorktreeStackKit_describeInteractiveWorktree formats metadata summaries", () => {
+void test("WorktreeStackKit_describeInteractiveWorktree formats metadata summaries", () => {
   assert.equal(
     WorktreeStackKit_describeInteractiveWorktree({
       folderName: "260329WT02-STACK-A",
@@ -64,7 +64,7 @@ test("WorktreeStackKit_describeInteractiveWorktree formats metadata summaries", 
   );
 });
 
-test("interactive slot helpers collect used slots and pick the first free slot", () => {
+void test("interactive slot helpers collect used slots and pick the first free slot", () => {
   const usedSlots = WorktreeStackKit_collectInteractiveUsedSlots([
     {
       folderName: "one",

@@ -68,4 +68,3 @@ export declare function WorktreeStackKit_syncLocalWorkspaceTarget(options: {
 }): void;
 /** Validates the source workspace, resolves target workspaces, and syncs each target. */
 export declare function WorktreeStackKit_runSyncLocalWorkspacesCommand(options: WorktreeStackKit_RunSyncLocalWorkspacesCommand_Options): void;
-//# sourceMappingURL=sync-local-workspaces.d.ts.map

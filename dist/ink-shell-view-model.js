@@ -213,4 +213,3 @@ function WorktreeStackKit_getInkShellIssueIcon(severity) {
     }
     return "·";
 }
-//# sourceMappingURL=ink-shell-view-model.js.map

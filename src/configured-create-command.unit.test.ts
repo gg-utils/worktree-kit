@@ -140,7 +140,7 @@ function configuredCreateCommandHelpConfig(): WorktreeStackKit_ConfiguredCreateC
   };
 }
 
-test("WorktreeStackKit_runConfiguredCreateCommand prints configured usage for help", () => {
+void test("WorktreeStackKit_runConfiguredCreateCommand prints configured usage for help", () => {
   const logs: string[] = [];
   const originalLog = console.log;
   console.log = (message?: unknown) => {

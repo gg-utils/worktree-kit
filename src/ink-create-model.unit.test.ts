@@ -33,7 +33,7 @@ import {
   WorktreeStackKit_isInkSwitchBooleanField,
 } from "./ink-create-model.js";
 
-test("WorktreeStackKit_createInitialInkCreateDraft returns stable defaults", () => {
+void test("WorktreeStackKit_createInitialInkCreateDraft returns stable defaults", () => {
   assert.deepEqual(WorktreeStackKit_createInitialInkCreateDraft(), {
     baseBranch: "",
     branchPrefix: "",
@@ -55,7 +55,7 @@ test("WorktreeStackKit_createInitialInkCreateDraft returns stable defaults", () 
   });
 });
 
-test("create catalog keeps identity section and field lookup order stable", () => {
+void test("create catalog keeps identity section and field lookup order stable", () => {
   assert.equal(WORKTREE_STACK_KIT_INK_CREATE_SECTIONS[0]?.id, "identity");
   assert.equal(WORKTREE_STACK_KIT_INK_CREATE_FIELDS[0]?.id, "branchPrefix");
   assert.equal(WorktreeStackKit_getInkCreateField(1)?.id, "stackName");
@@ -72,12 +72,12 @@ test("create catalog keeps identity section and field lookup order stable", () =
   );
 });
 
-test("create catalog identifies boolean fields", () => {
+void test("create catalog identifies boolean fields", () => {
   assert.equal(WorktreeStackKit_isInkCreateBooleanField("runInstall"), true);
   assert.equal(WorktreeStackKit_isInkCreateBooleanField("stackName"), false);
 });
 
-test("switch catalog defaults and text-only field metadata are stable", () => {
+void test("switch catalog defaults and text-only field metadata are stable", () => {
   assert.deepEqual(WorktreeStackKit_createInitialInkSwitchDraft(), {
     branchPrefix: "",
     environmentFilter: "",

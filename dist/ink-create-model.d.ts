@@ -92,4 +92,3 @@ export declare function WorktreeStackKit_getInkSwitchSectionIndex(sectionId: Wor
 export declare function WorktreeStackKit_getInkSwitchFieldsForSection(sectionId: WorktreeStackKit_InkSwitchSectionId): readonly WorktreeStackKit_InkSwitchField[];
 /** Returns whether `fieldId` refers to a boolean switch field. */
 export declare function WorktreeStackKit_isInkSwitchBooleanField(fieldId: WorktreeStackKit_InkSwitchFieldId): boolean;
-//# sourceMappingURL=ink-create-model.d.ts.map

@@ -33,4 +33,3 @@ export declare function WorktreeStackKit_InkResultScreen({ actionPlan, result, }
     actionPlan: WorktreeStackKit_InkUiActionRequestPlan;
     result: WorktreeStackKit_InkUiResultModel;
 }): React.ReactNode;
-//# sourceMappingURL=ink-fullscreen-screens.d.ts.map

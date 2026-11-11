@@ -156,4 +156,3 @@ export function WorktreeStackKit_syncLocalDirectoriesIntoTarget(options) {
         });
     }
 }
-//# sourceMappingURL=local-state-sync.js.map

@@ -54,4 +54,3 @@ export type WorktreeStackKit_AlignActiveParallelCommand = {
 export declare function WorktreeStackKit_renderAlignActiveParallelUsage(config: WorktreeStackKit_AlignActiveParallelCommandConfig): string;
 export declare function WorktreeStackKit_createAlignActiveParallelCommand(config: WorktreeStackKit_AlignActiveParallelCommandConfig): WorktreeStackKit_AlignActiveParallelCommand;
 export {};
-//# sourceMappingURL=align-active-parallel-command.d.ts.map

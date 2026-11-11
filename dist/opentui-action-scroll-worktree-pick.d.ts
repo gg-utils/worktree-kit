@@ -66,4 +66,3 @@ export declare function WorktreeStackKit_planOpenTuiWorktreePickSelection(option
 export declare function WorktreeStackKit_planOpenTuiEmptyWorktreePickSelection(options: {
     readonly optionValue: string | undefined;
 }): WorktreeStackKit_OpenTuiEmptyWorktreePickSelectionPlan;
-//# sourceMappingURL=opentui-action-scroll-worktree-pick.d.ts.map

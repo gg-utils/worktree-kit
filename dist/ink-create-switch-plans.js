@@ -278,4 +278,3 @@ export function WorktreeStackKit_buildInkSwitchInteractivePlan(options) {
 function WorktreeStackKit_hasCreateSwitchBlockingIssue(issues) {
     return issues.some((issue) => issue.severity === "error");
 }
-//# sourceMappingURL=ink-create-switch-plans.js.map

@@ -123,4 +123,3 @@ export function WorktreeStackKit_resolveExistingInteractivePath(inputPath) {
     }
     return fs.realpathSync(resolvedPath);
 }
-//# sourceMappingURL=interactive-worktrees.js.map

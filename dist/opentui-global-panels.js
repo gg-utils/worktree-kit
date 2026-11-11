@@ -107,4 +107,3 @@ function WorktreeStackKit_handleOpenTuiPruneStaleFormSelection(options) {
     });
     options.props.setPhase(selectionPlan.nextPhase);
 }
-//# sourceMappingURL=opentui-global-panels.js.map

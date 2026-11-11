@@ -25,7 +25,7 @@ import {
   WorktreeStackKit_inkReducer,
 } from "./ink-reducer.js";
 
-test("WorktreeStackKit_createInitialInkState returns the default shell state", () => {
+void test("WorktreeStackKit_createInitialInkState returns the default shell state", () => {
   const state = WorktreeStackKit_createInitialInkState();
 
   assert.equal(state.status, "loading");
@@ -37,7 +37,7 @@ test("WorktreeStackKit_createInitialInkState returns the default shell state", (
   assert.equal(state.actionOptions.updateFromMainExecutionMode, "plan");
 });
 
-test("WorktreeStackKit_inkReducer applies load errors through the package state machine", () => {
+void test("WorktreeStackKit_inkReducer applies load errors through the package state machine", () => {
   const failed = WorktreeStackKit_inkReducer(
     WorktreeStackKit_createInitialInkState(),
     { type: "load-error", errorMessage: "inventory failed" },
@@ -49,7 +49,7 @@ test("WorktreeStackKit_inkReducer applies load errors through the package state 
   assert.equal(failed.activePlan, null);
 });
 
-test("WorktreeStackKit_inkReducer applies focused option toggles", () => {
+void test("WorktreeStackKit_inkReducer applies focused option toggles", () => {
   const startActionIndex = WORKTREE_STACK_KIT_INK_ACTIONS.findIndex(
     (action) => action.id === "start",
   );

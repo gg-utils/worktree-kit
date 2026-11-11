@@ -1,395 +1,402 @@
 {
   "name": "@gg-utils/worktree-kit",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
   "description": "Reusable worktree stack command/config primitives for project-owned worktrees.config.ts adapters.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "default": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
     "./slot-ports": {
-      "types": "./src/slot-ports.ts",
-      "default": "./src/slot-ports.ts"
+      "types": "./dist/slot-ports.d.ts",
+      "default": "./dist/slot-ports.js"
     },
     "./configured-submodules": {
-      "types": "./src/configured-submodules.ts",
-      "default": "./src/configured-submodules.ts"
+      "types": "./dist/configured-submodules.d.ts",
+      "default": "./dist/configured-submodules.js"
     },
     "./interactive-session": {
-      "types": "./src/interactive-session.ts",
-      "default": "./src/interactive-session.ts"
+      "types": "./dist/interactive-session.d.ts",
+      "default": "./dist/interactive-session.js"
     },
     "./interactive-worktrees": {
-      "types": "./src/interactive-worktrees.ts",
-      "default": "./src/interactive-worktrees.ts"
+      "types": "./dist/interactive-worktrees.d.ts",
+      "default": "./dist/interactive-worktrees.js"
     },
     "./interactive-paths": {
-      "types": "./src/interactive-paths.ts",
-      "default": "./src/interactive-paths.ts"
+      "types": "./dist/interactive-paths.d.ts",
+      "default": "./dist/interactive-paths.js"
     },
     "./local-state-sync": {
-      "types": "./src/local-state-sync.ts",
-      "default": "./src/local-state-sync.ts"
+      "types": "./dist/local-state-sync.d.ts",
+      "default": "./dist/local-state-sync.js"
     },
     "./env-file": {
-      "types": "./src/env-file.ts",
-      "default": "./src/env-file.ts"
+      "types": "./dist/env-file.d.ts",
+      "default": "./dist/env-file.js"
     },
     "./create-cli-context": {
-      "types": "./src/create-cli-context.ts",
-      "default": "./src/create-cli-context.ts"
+      "types": "./dist/create-cli-context.d.ts",
+      "default": "./dist/create-cli-context.js"
     },
     "./create-command": {
-      "types": "./src/create-command.ts",
-      "default": "./src/create-command.ts"
+      "types": "./dist/create-command.d.ts",
+      "default": "./dist/create-command.js"
     },
     "./create-preflight-validation": {
-      "types": "./src/create-preflight-validation.ts",
-      "default": "./src/create-preflight-validation.ts"
+      "types": "./dist/create-preflight-validation.d.ts",
+      "default": "./dist/create-preflight-validation.js"
     },
     "./create-realm-and-git": {
-      "types": "./src/create-realm-and-git.ts",
-      "default": "./src/create-realm-and-git.ts"
+      "types": "./dist/create-realm-and-git.d.ts",
+      "default": "./dist/create-realm-and-git.js"
     },
     "./create-env-orchestration": {
-      "types": "./src/create-env-orchestration.ts",
-      "default": "./src/create-env-orchestration.ts"
+      "types": "./dist/create-env-orchestration.d.ts",
+      "default": "./dist/create-env-orchestration.js"
     },
     "./create-post-provision": {
-      "types": "./src/create-post-provision.ts",
-      "default": "./src/create-post-provision.ts"
+      "types": "./dist/create-post-provision.d.ts",
+      "default": "./dist/create-post-provision.js"
     },
     "./codex-project-integration": {
-      "types": "./src/codex-project-integration.ts",
-      "default": "./src/codex-project-integration.ts"
+      "types": "./dist/codex-project-integration.d.ts",
+      "default": "./dist/codex-project-integration.js"
     },
     "./sync-local-workspaces": {
-      "types": "./src/sync-local-workspaces.ts",
-      "default": "./src/sync-local-workspaces.ts"
+      "types": "./dist/sync-local-workspaces.d.ts",
+      "default": "./dist/sync-local-workspaces.js"
     },
     "./state-check": {
-      "types": "./src/state-check.ts",
-      "default": "./src/state-check.ts"
+      "types": "./dist/state-check.d.ts",
+      "default": "./dist/state-check.js"
     },
     "./memory-monitor": {
-      "types": "./src/memory-monitor.ts",
-      "default": "./src/memory-monitor.ts"
+      "types": "./dist/memory-monitor.d.ts",
+      "default": "./dist/memory-monitor.js"
     },
     "./repo-root-sync": {
-      "types": "./src/repo-root-sync.ts",
-      "default": "./src/repo-root-sync.ts"
+      "types": "./dist/repo-root-sync.d.ts",
+      "default": "./dist/repo-root-sync.js"
     },
     "./switch-command": {
-      "types": "./src/switch-command.ts",
-      "default": "./src/switch-command.ts"
+      "types": "./dist/switch-command.d.ts",
+      "default": "./dist/switch-command.js"
     },
     "./destroy-command": {
-      "types": "./src/destroy-command.ts",
-      "default": "./src/destroy-command.ts"
+      "types": "./dist/destroy-command.d.ts",
+      "default": "./dist/destroy-command.js"
     },
     "./env-doctor-command": {
-      "types": "./src/env-doctor-command.ts",
-      "default": "./src/env-doctor-command.ts"
+      "types": "./dist/env-doctor-command.d.ts",
+      "default": "./dist/env-doctor-command.js"
     },
     "./package.json": "./package.json",
     "./repair-command": {
-      "types": "./src/repair-command.ts",
-      "default": "./src/repair-command.ts"
+      "types": "./dist/repair-command.d.ts",
+      "default": "./dist/repair-command.js"
     },
     "./update-from-main-command": {
-      "types": "./src/update-from-main-command.ts",
-      "default": "./src/update-from-main-command.ts"
+      "types": "./dist/update-from-main-command.d.ts",
+      "default": "./dist/update-from-main-command.js"
     },
     "./merge-command": {
-      "types": "./src/merge-command.ts",
-      "default": "./src/merge-command.ts"
+      "types": "./dist/merge-command.d.ts",
+      "default": "./dist/merge-command.js"
     },
     "./align-active": {
-      "types": "./src/align-active.ts",
-      "default": "./src/align-active.ts"
+      "types": "./dist/align-active.d.ts",
+      "default": "./dist/align-active.js"
     },
     "./align-active-command": {
-      "types": "./src/align-active-command.ts",
-      "default": "./src/align-active-command.ts"
+      "types": "./dist/align-active-command.d.ts",
+      "default": "./dist/align-active-command.js"
     },
     "./align-active-parallel-command": {
-      "types": "./src/align-active-parallel-command.ts",
-      "default": "./src/align-active-parallel-command.ts"
+      "types": "./dist/align-active-parallel-command.d.ts",
+      "default": "./dist/align-active-parallel-command.js"
     },
     "./start-command": {
-      "types": "./src/start-command.ts",
-      "default": "./src/start-command.ts"
+      "types": "./dist/start-command.d.ts",
+      "default": "./dist/start-command.js"
     },
     "./antigravity-project-integration": {
-      "types": "./src/antigravity-project-integration.ts",
-      "default": "./src/antigravity-project-integration.ts"
+      "types": "./dist/antigravity-project-integration.d.ts",
+      "default": "./dist/antigravity-project-integration.js"
     },
     "./zsh-aliases-integration": {
-      "types": "./src/zsh-aliases-integration.ts",
-      "default": "./src/zsh-aliases-integration.ts"
+      "types": "./dist/zsh-aliases-integration.d.ts",
+      "default": "./dist/zsh-aliases-integration.js"
     },
     "./dev-compatibility": {
-      "types": "./src/dev-compatibility.ts",
-      "default": "./src/dev-compatibility.ts"
+      "types": "./dist/dev-compatibility.d.ts",
+      "default": "./dist/dev-compatibility.js"
     },
     "./configured-create-command": {
-      "types": "./src/configured-create-command.ts",
-      "default": "./src/configured-create-command.ts"
+      "types": "./dist/configured-create-command.d.ts",
+      "default": "./dist/configured-create-command.js"
     },
     "./ui-command-catalog": {
-      "types": "./src/ui-command-catalog.ts",
-      "default": "./src/ui-command-catalog.ts"
+      "types": "./dist/ui-command-catalog.d.ts",
+      "default": "./dist/ui-command-catalog.js"
     },
     "./opentui-shell-contracts": {
-      "types": "./src/opentui-shell-contracts.ts",
-      "default": "./src/opentui-shell-contracts.ts"
+      "types": "./dist/opentui-shell-contracts.d.ts",
+      "default": "./dist/opentui-shell-contracts.js"
     },
     "./opentui-shell-keyboard": {
-      "types": "./src/opentui-shell-keyboard.ts",
-      "default": "./src/opentui-shell-keyboard.ts"
+      "types": "./dist/opentui-shell-keyboard.d.ts",
+      "default": "./dist/opentui-shell-keyboard.js"
     },
     "./opentui-shell-menu-actions": {
-      "types": "./src/opentui-shell-menu-actions.ts",
-      "default": "./src/opentui-shell-menu-actions.ts"
+      "types": "./dist/opentui-shell-menu-actions.d.ts",
+      "default": "./dist/opentui-shell-menu-actions.js"
     },
     "./opentui-action-scroll-npm-plans": {
-      "types": "./src/opentui-action-scroll-npm-plans.ts",
-      "default": "./src/opentui-action-scroll-npm-plans.ts"
+      "types": "./dist/opentui-action-scroll-npm-plans.d.ts",
+      "default": "./dist/opentui-action-scroll-npm-plans.js"
     },
     "./opentui-action-scroll-worktree-pick": {
-      "types": "./src/opentui-action-scroll-worktree-pick.ts",
-      "default": "./src/opentui-action-scroll-worktree-pick.ts"
+      "types": "./dist/opentui-action-scroll-worktree-pick.d.ts",
+      "default": "./dist/opentui-action-scroll-worktree-pick.js"
     },
     "./opentui-action-scroll-global-plans": {
-      "types": "./src/opentui-action-scroll-global-plans.ts",
-      "default": "./src/opentui-action-scroll-global-plans.ts"
+      "types": "./dist/opentui-action-scroll-global-plans.d.ts",
+      "default": "./dist/opentui-action-scroll-global-plans.js"
     },
     "./opentui-action-scroll-switch-plans": {
-      "types": "./src/opentui-action-scroll-switch-plans.ts",
-      "default": "./src/opentui-action-scroll-switch-plans.ts"
+      "types": "./dist/opentui-action-scroll-switch-plans.d.ts",
+      "default": "./dist/opentui-action-scroll-switch-plans.js"
     },
     "./opentui-action-scroll-diagnostics-pool-plans": {
-      "types": "./src/opentui-action-scroll-diagnostics-pool-plans.ts",
-      "default": "./src/opentui-action-scroll-diagnostics-pool-plans.ts"
+      "types": "./dist/opentui-action-scroll-diagnostics-pool-plans.d.ts",
+      "default": "./dist/opentui-action-scroll-diagnostics-pool-plans.js"
     },
     "./interactive-flows": {
-      "types": "./src/interactive-flows.ts",
-      "default": "./src/interactive-flows.ts"
+      "types": "./dist/interactive-flows.d.ts",
+      "default": "./dist/interactive-flows.js"
     },
     "./ink-launch-options": {
-      "types": "./src/ink-launch-options.ts",
-      "default": "./src/ink-launch-options.ts"
+      "types": "./dist/ink-launch-options.d.ts",
+      "default": "./dist/ink-launch-options.js"
     },
     "./ink-entrypoint": {
-      "types": "./src/ink-entrypoint.ts",
-      "default": "./src/ink-entrypoint.ts"
+      "types": "./dist/ink-entrypoint.d.ts",
+      "default": "./dist/ink-entrypoint.js"
     },
     "./ink-launch-resolution": {
-      "types": "./src/ink-launch-resolution.ts",
-      "default": "./src/ink-launch-resolution.ts"
+      "types": "./dist/ink-launch-resolution.d.ts",
+      "default": "./dist/ink-launch-resolution.js"
     },
     "./ink-create-model": {
-      "types": "./src/ink-create-model.ts",
-      "default": "./src/ink-create-model.ts"
+      "types": "./dist/ink-create-model.d.ts",
+      "default": "./dist/ink-create-model.js"
     },
     "./ink-action-plan-dispatcher": {
-      "types": "./src/ink-action-plan-dispatcher.ts",
-      "default": "./src/ink-action-plan-dispatcher.ts"
+      "types": "./dist/ink-action-plan-dispatcher.d.ts",
+      "default": "./dist/ink-action-plan-dispatcher.js"
     },
     "./ink-action-catalog": {
-      "types": "./src/ink-action-catalog.ts",
-      "default": "./src/ink-action-catalog.ts"
+      "types": "./dist/ink-action-catalog.d.ts",
+      "default": "./dist/ink-action-catalog.js"
     },
     "./ink-reducer": {
-      "types": "./src/ink-reducer.ts",
-      "default": "./src/ink-reducer.ts"
+      "types": "./dist/ink-reducer.d.ts",
+      "default": "./dist/ink-reducer.js"
     },
     "./ink-reducer-helpers": {
-      "types": "./src/ink-reducer-helpers.ts",
-      "default": "./src/ink-reducer-helpers.ts"
+      "types": "./dist/ink-reducer-helpers.d.ts",
+      "default": "./dist/ink-reducer-helpers.js"
     },
     "./ink-display-view-model": {
-      "types": "./src/ink-display-view-model.ts",
-      "default": "./src/ink-display-view-model.ts"
+      "types": "./dist/ink-display-view-model.d.ts",
+      "default": "./dist/ink-display-view-model.js"
     },
     "./ink-keyboard-routing": {
-      "types": "./src/ink-keyboard-routing.ts",
-      "default": "./src/ink-keyboard-routing.ts"
+      "types": "./dist/ink-keyboard-routing.d.ts",
+      "default": "./dist/ink-keyboard-routing.js"
     },
     "./ink-ui-contracts": {
-      "types": "./src/ink-ui-contracts.ts",
-      "default": "./src/ink-ui-contracts.ts"
+      "types": "./dist/ink-ui-contracts.d.ts",
+      "default": "./dist/ink-ui-contracts.js"
     },
     "./ink-inventory-discovery": {
-      "types": "./src/ink-inventory-discovery.ts",
-      "default": "./src/ink-inventory-discovery.ts"
+      "types": "./dist/ink-inventory-discovery.d.ts",
+      "default": "./dist/ink-inventory-discovery.js"
     },
     "./ink-record-workflow-plans": {
-      "types": "./src/ink-record-workflow-plans.ts",
-      "default": "./src/ink-record-workflow-plans.ts"
+      "types": "./dist/ink-record-workflow-plans.d.ts",
+      "default": "./dist/ink-record-workflow-plans.js"
     },
     "./ink-admin-task-plans": {
-      "types": "./src/ink-admin-task-plans.ts",
-      "default": "./src/ink-admin-task-plans.ts"
+      "types": "./dist/ink-admin-task-plans.d.ts",
+      "default": "./dist/ink-admin-task-plans.js"
     },
     "./ink-create-switch-plans": {
-      "types": "./src/ink-create-switch-plans.ts",
-      "default": "./src/ink-create-switch-plans.ts"
+      "types": "./dist/ink-create-switch-plans.d.ts",
+      "default": "./dist/ink-create-switch-plans.js"
     },
     "./ink-create-resolution": {
-      "types": "./src/ink-create-resolution.ts",
-      "default": "./src/ink-create-resolution.ts"
+      "types": "./dist/ink-create-resolution.d.ts",
+      "default": "./dist/ink-create-resolution.js"
     },
     "./ink-result-model": {
-      "types": "./src/ink-result-model.ts",
-      "default": "./src/ink-result-model.ts"
+      "types": "./dist/ink-result-model.d.ts",
+      "default": "./dist/ink-result-model.js"
     },
     "./ink-bridge": {
-      "types": "./src/ink-bridge.ts",
-      "default": "./src/ink-bridge.ts"
+      "types": "./dist/ink-bridge.d.ts",
+      "default": "./dist/ink-bridge.js"
     },
     "./ink-shell-view-model": {
-      "types": "./src/ink-shell-view-model.ts",
-      "default": "./src/ink-shell-view-model.ts"
+      "types": "./dist/ink-shell-view-model.d.ts",
+      "default": "./dist/ink-shell-view-model.js"
     },
     "./ink-fullscreen-view-model": {
-      "types": "./src/ink-fullscreen-view-model.ts",
-      "default": "./src/ink-fullscreen-view-model.ts"
+      "types": "./dist/ink-fullscreen-view-model.d.ts",
+      "default": "./dist/ink-fullscreen-view-model.js"
     },
     "./opentui-create-wizard-form-plans": {
-      "types": "./src/opentui-create-wizard-form-plans.ts",
-      "default": "./src/opentui-create-wizard-form-plans.ts"
+      "types": "./dist/opentui-create-wizard-form-plans.d.ts",
+      "default": "./dist/opentui-create-wizard-form-plans.js"
     },
     "./opentui-create-wizard-panels": {
-      "types": "./src/opentui-create-wizard-panels.tsx",
-      "default": "./src/opentui-create-wizard-panels.tsx"
+      "types": "./dist/opentui-create-wizard-panels.d.ts",
+      "default": "./dist/opentui-create-wizard-panels.js"
     },
     "./opentui-create-preview": {
-      "types": "./src/opentui-create-preview.ts",
-      "default": "./src/opentui-create-preview.ts"
+      "types": "./dist/opentui-create-preview.d.ts",
+      "default": "./dist/opentui-create-preview.js"
     },
     "./opentui-action-scroll-maintenance-plans": {
-      "types": "./src/opentui-action-scroll-maintenance-plans.ts",
-      "default": "./src/opentui-action-scroll-maintenance-plans.ts"
+      "types": "./dist/opentui-action-scroll-maintenance-plans.d.ts",
+      "default": "./dist/opentui-action-scroll-maintenance-plans.js"
     },
     "./opentui-app-shell-view-model": {
-      "types": "./src/opentui-app-shell-view-model.ts",
-      "default": "./src/opentui-app-shell-view-model.ts"
+      "types": "./dist/opentui-app-shell-view-model.d.ts",
+      "default": "./dist/opentui-app-shell-view-model.js"
     },
     "./opentui-app-shell-panels": {
-      "types": "./src/opentui-app-shell-panels.tsx",
-      "default": "./src/opentui-app-shell-panels.tsx"
+      "types": "./dist/opentui-app-shell-panels.d.ts",
+      "default": "./dist/opentui-app-shell-panels.js"
     },
     "./opentui-app-run-lifecycle": {
-      "types": "./src/opentui-app-run-lifecycle.ts",
-      "default": "./src/opentui-app-run-lifecycle.ts"
+      "types": "./dist/opentui-app-run-lifecycle.d.ts",
+      "default": "./dist/opentui-app-run-lifecycle.js"
     },
     "./opentui-child-process": {
-      "types": "./src/opentui-child-process.ts",
-      "default": "./src/opentui-child-process.ts"
+      "types": "./dist/opentui-child-process.d.ts",
+      "default": "./dist/opentui-child-process.js"
     },
     "./opentui-app-controller": {
-      "types": "./src/opentui-app-controller.ts",
-      "default": "./src/opentui-app-controller.ts"
+      "types": "./dist/opentui-app-controller.d.ts",
+      "default": "./dist/opentui-app-controller.js"
     },
     "./opentui-shell-serializers": {
-      "types": "./src/opentui-shell-serializers.ts",
-      "default": "./src/opentui-shell-serializers.ts"
+      "types": "./dist/opentui-shell-serializers.d.ts",
+      "default": "./dist/opentui-shell-serializers.js"
     },
     "./ink-action-options-panel": {
-      "types": "./src/ink-action-options-panel.tsx",
-      "default": "./src/ink-action-options-panel.tsx"
+      "types": "./dist/ink-action-options-panel.d.ts",
+      "default": "./dist/ink-action-options-panel.js"
     },
     "./ink-issue-line": {
-      "types": "./src/ink-issue-line.tsx",
-      "default": "./src/ink-issue-line.tsx"
+      "types": "./dist/ink-issue-line.d.ts",
+      "default": "./dist/ink-issue-line.js"
     },
     "./ink-fullscreen-screens": {
-      "types": "./src/ink-fullscreen-screens.tsx",
-      "default": "./src/ink-fullscreen-screens.tsx"
+      "types": "./dist/ink-fullscreen-screens.d.ts",
+      "default": "./dist/ink-fullscreen-screens.js"
     },
     "./ink-shell": {
-      "types": "./src/ink-shell.tsx",
-      "default": "./src/ink-shell.tsx"
+      "types": "./dist/ink-shell.d.ts",
+      "default": "./dist/ink-shell.js"
     },
     "./ink-app": {
-      "types": "./src/ink-app.tsx",
-      "default": "./src/ink-app.tsx"
+      "types": "./dist/ink-app.d.ts",
+      "default": "./dist/ink-app.js"
     },
     "./opentui-auto-focus-tab-select": {
-      "types": "./src/opentui-auto-focus-tab-select.tsx",
-      "default": "./src/opentui-auto-focus-tab-select.tsx"
+      "types": "./dist/opentui-auto-focus-tab-select.d.ts",
+      "default": "./dist/opentui-auto-focus-tab-select.js"
     },
     "./opentui-layout-test-harness": {
-      "types": "./src/opentui-layout-test-harness.tsx",
-      "default": "./src/opentui-layout-test-harness.tsx"
+      "types": "./dist/opentui-layout-test-harness.d.ts",
+      "default": "./dist/opentui-layout-test-harness.js"
     },
     "./opentui-diagnostics-pool-panel": {
-      "types": "./src/opentui-diagnostics-pool-panel.tsx",
-      "default": "./src/opentui-diagnostics-pool-panel.tsx"
+      "types": "./dist/opentui-diagnostics-pool-panel.d.ts",
+      "default": "./dist/opentui-diagnostics-pool-panel.js"
     },
     "./opentui-maintenance-panels": {
-      "types": "./src/opentui-maintenance-panels.tsx",
-      "default": "./src/opentui-maintenance-panels.tsx"
+      "types": "./dist/opentui-maintenance-panels.d.ts",
+      "default": "./dist/opentui-maintenance-panels.js"
     },
     "./opentui-npm-panels": {
-      "types": "./src/opentui-npm-panels.tsx",
-      "default": "./src/opentui-npm-panels.tsx"
+      "types": "./dist/opentui-npm-panels.d.ts",
+      "default": "./dist/opentui-npm-panels.js"
     },
     "./opentui-global-panels": {
-      "types": "./src/opentui-global-panels.tsx",
-      "default": "./src/opentui-global-panels.tsx"
+      "types": "./dist/opentui-global-panels.d.ts",
+      "default": "./dist/opentui-global-panels.js"
     },
     "./opentui-worktree-pick-panel": {
-      "types": "./src/opentui-worktree-pick-panel.tsx",
-      "default": "./src/opentui-worktree-pick-panel.tsx"
+      "types": "./dist/opentui-worktree-pick-panel.d.ts",
+      "default": "./dist/opentui-worktree-pick-panel.js"
     },
     "./opentui-switch-panel": {
-      "types": "./src/opentui-switch-panel.tsx",
-      "default": "./src/opentui-switch-panel.tsx"
+      "types": "./dist/opentui-switch-panel.d.ts",
+      "default": "./dist/opentui-switch-panel.js"
     },
     "./opentui-action-scroll": {
-      "types": "./src/opentui-action-scroll.tsx",
-      "default": "./src/opentui-action-scroll.tsx"
+      "types": "./dist/opentui-action-scroll.d.ts",
+      "default": "./dist/opentui-action-scroll.js"
     },
     "./opentui-app-shell": {
-      "types": "./src/opentui-app-shell.tsx",
-      "default": "./src/opentui-app-shell.tsx"
+      "types": "./dist/opentui-app-shell.d.ts",
+      "default": "./dist/opentui-app-shell.js"
     }
   },
   "files": [
     "dist/",
-    "src/",
-    "!src/**/*.unit.test.ts",
     "README.md",
-    "tsconfig.json",
-    "tsconfig.build.json"
+    "LICENSE"
   ],
   "engines": {
-    "node": ">=24.11.1 <25",
+    "node": ">=22.0.0 <27",
     "npm": ">=9.0.0"
   },
   "packageManager": "npm@11.12.1",
   "dependencies": {
-    "@gg-utils/env-materialize-core": "git+https://github.com/gg-utils/env-materialize-core.git#main",
+    "@gg-utils/env-materialize-core": "git+https://github.com/gg-utils/env-materialize-core.git#v0.3.0",
     "@opentui/core": "^0.1.90",
     "@opentui/react": "^0.1.90",
-    "@gg-utils/worktree-core": "git+https://github.com/gg-utils/worktree-core.git#main",
+    "@gg-utils/worktree-core": "git+https://github.com/gg-utils/worktree-core.git#v0.2.0",
     "ink": "^6.8.0",
     "react": "^19.2.0"
   },
   "scripts": {
-    "build": "node ../../node_modules/typescript/bin/tsc -p tsconfig.build.json",
-    "type-check": "node ../../node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
-    "test": "node ../../node_modules/tsx/dist/cli.mjs --test \"src/**/*.unit.test.ts\""
+    "build": "tsc -p tsconfig.build.json",
+    "type-check": "tsc --noEmit -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test \".test-dist/**/*.unit.test.js\"",
+    "lint": "eslint --max-warnings 0 .",
+    "check:dist": "sh scripts/check-dist.sh",
+    "check:strict": "tsc --noEmit -p tsconfig.strict.json"
   },
   "devDependencies": {
-    "@types/react": "^19.2.0"
+    "@types/react": "19.2.0",
+    "typescript": "5.9.3",
+    "@types/node": "22.20.5",
+    "eslint": "9.39.5",
+    "typescript-eslint": "8.72.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gg-utils/worktree-kit.git"
   }
 }

@@ -17,6 +17,6 @@ import { test } from "node:test";
 
 import { WorktreeStackKit_useOpenTuiAppController } from "./opentui-app-controller.js";
 
-test("exports the package-owned OpenTUI app controller hook", () => {
+void test("exports the package-owned OpenTUI app controller hook", () => {
   assert.equal(typeof WorktreeStackKit_useOpenTuiAppController, "function");
 });

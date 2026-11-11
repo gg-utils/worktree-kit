@@ -984,4 +984,3 @@ export async function WorktreeStackKit_runUpdateFromMainCli(options) {
 export async function WorktreeStackKit_runUpdateFromMain(options) {
     return WorktreeStackKit_createUpdateFromMainCommand(options.config).runUpdateFromMain(options.options);
 }
-//# sourceMappingURL=update-from-main-command.js.map

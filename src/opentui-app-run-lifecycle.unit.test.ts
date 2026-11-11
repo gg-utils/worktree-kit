@@ -58,14 +58,14 @@ function createRunLifecycleProbe() {
   return { callbacks, events };
 }
 
-test("WorktreeStackKit_formatOpenTuiNpmRunLabel formats npm script labels", () => {
+void test("WorktreeStackKit_formatOpenTuiNpmRunLabel formats npm script labels", () => {
   assert.equal(
     WorktreeStackKit_formatOpenTuiNpmRunLabel("worktrees:start"),
     "npm run worktrees:start",
   );
 });
 
-test("WorktreeStackKit_runOpenTuiCommandWithLifecycle handles cancelable runs", async () => {
+void test("WorktreeStackKit_runOpenTuiCommandWithLifecycle handles cancelable runs", async () => {
   const probe = createRunLifecycleProbe();
 
   await WorktreeStackKit_runOpenTuiCommandWithLifecycle({
@@ -96,7 +96,7 @@ test("WorktreeStackKit_runOpenTuiCommandWithLifecycle handles cancelable runs", 
   ]);
 });
 
-test("WorktreeStackKit_runOpenTuiCommandWithLifecycle handles direct failures", async () => {
+void test("WorktreeStackKit_runOpenTuiCommandWithLifecycle handles direct failures", async () => {
   const probe = createRunLifecycleProbe();
 
   await WorktreeStackKit_runOpenTuiCommandWithLifecycle({

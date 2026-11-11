@@ -23,14 +23,14 @@ import {
   WorktreeStackKit_parseInkLaunchOptions,
 } from "./ink-launch-options.js";
 
-test("WorktreeStackKit_getInkHelpText lists launch flags", () => {
+void test("WorktreeStackKit_getInkHelpText lists launch flags", () => {
   const helpText = WorktreeStackKit_getInkHelpText();
   assert.match(helpText, /--action <action-id>/);
   assert.match(helpText, /--create-follow-up-start/);
   assert.match(helpText, /--pool-next-stack-name/);
 });
 
-test("WorktreeStackKit_normalizeInkActionId maps documented aliases", () => {
+void test("WorktreeStackKit_normalizeInkActionId maps documented aliases", () => {
   assert.equal(
     WorktreeStackKit_normalizeInkActionId("bootstrap"),
     "platform-bootstrap",
@@ -42,7 +42,7 @@ test("WorktreeStackKit_normalizeInkActionId maps documented aliases", () => {
   assert.equal(WorktreeStackKit_normalizeInkActionId("missing"), null);
 });
 
-test("WorktreeStackKit_parseInkLaunchOptions infers create action from draft flags", () => {
+void test("WorktreeStackKit_parseInkLaunchOptions infers create action from draft flags", () => {
   assert.deepEqual(
     WorktreeStackKit_parseInkLaunchOptions([
       "--create-stack-name",
@@ -68,7 +68,7 @@ test("WorktreeStackKit_parseInkLaunchOptions infers create action from draft fla
   );
 });
 
-test("WorktreeStackKit_parseInkLaunchOptions rejects conflicting worktree selectors", () => {
+void test("WorktreeStackKit_parseInkLaunchOptions rejects conflicting worktree selectors", () => {
   assert.throws(
     () =>
       WorktreeStackKit_parseInkLaunchOptions([

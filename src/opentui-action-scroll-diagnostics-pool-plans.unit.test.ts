@@ -47,7 +47,7 @@ const commands: WorktreeStackKit_OpenTuiDiagnosticsPoolCommands = {
   },
 };
 
-test("OpenTUI diagnostics and pool visibility helpers match flow phases", () => {
+void test("OpenTUI diagnostics and pool visibility helpers match flow phases", () => {
   assert.equal(
     WorktreeStackKit_shouldShowOpenTuiDiagnosticsSubmenu({
       flow: "diagnostics",
@@ -84,7 +84,7 @@ test("OpenTUI diagnostics and pool visibility helpers match flow phases", () => 
   );
 });
 
-test("OpenTUI diagnostics and pool option builders use configured command names", () => {
+void test("OpenTUI diagnostics and pool option builders use configured command names", () => {
   assert.deepEqual(WorktreeStackKit_buildOpenTuiDiagnosticsOptions({ commands }), [
     {
       description: "local:edge:realm:list",
@@ -135,7 +135,7 @@ test("OpenTUI diagnostics and pool option builders use configured command names"
   ]);
 });
 
-test("OpenTUI diagnostics selection plans fixed npm previews", () => {
+void test("OpenTUI diagnostics selection plans fixed npm previews", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiDiagnosticsSelection({
       commands,
@@ -166,7 +166,7 @@ test("OpenTUI diagnostics selection plans fixed npm previews", () => {
   );
 });
 
-test("OpenTUI realm-pool submenu and next-form planners map selections", () => {
+void test("OpenTUI realm-pool submenu and next-form planners map selections", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiPoolSubmenuSelection({
       commands,

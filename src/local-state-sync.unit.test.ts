@@ -66,7 +66,7 @@ function writeGitmodules(rootDir: string): void {
   );
 }
 
-test("WorktreeStackKit_syncLocalFilesIntoTarget copies files and rewrites text", () => {
+void test("WorktreeStackKit_syncLocalFilesIntoTarget copies files and rewrites text", () => {
   const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), "worktree-kit-local-files-"));
   try {
     const sourceWorkspacePath = path.join(temporaryRoot, "source");
@@ -103,7 +103,7 @@ test("WorktreeStackKit_syncLocalFilesIntoTarget copies files and rewrites text",
   }
 });
 
-test("WorktreeStackKit_detectLocalDirectories scans root and configured submodules", () => {
+void test("WorktreeStackKit_detectLocalDirectories scans root and configured submodules", () => {
   const sourceWorkspacePath = fs.mkdtempSync(
     path.join(os.tmpdir(), "worktree-kit-detect-local-dirs-"),
   );
@@ -128,7 +128,7 @@ test("WorktreeStackKit_detectLocalDirectories scans root and configured submodul
   }
 });
 
-test("WorktreeStackKit_syncLocalDirectoriesIntoTarget copies local directories", () => {
+void test("WorktreeStackKit_syncLocalDirectoriesIntoTarget copies local directories", () => {
   const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), "worktree-kit-local-dirs-"));
   try {
     const sourceWorkspacePath = path.join(temporaryRoot, "source");

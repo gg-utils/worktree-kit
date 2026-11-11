@@ -141,4 +141,3 @@ export declare function WorktreeStackKit_planOpenTuiPoolNextFormSelection(option
     readonly optionValue: string | undefined;
     readonly poolNextStackName: string;
 }): WorktreeStackKit_OpenTuiPoolNextFormSelectionPlan;
-//# sourceMappingURL=opentui-action-scroll-diagnostics-pool-plans.d.ts.map

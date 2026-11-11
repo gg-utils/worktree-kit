@@ -35,7 +35,7 @@ import {
   WorktreeStackKit_planOpenTuiUpdateFromMainNpmPreview,
 } from "./opentui-action-scroll-npm-plans.js";
 
-test("OpenTUI action-scroll npm planners expose stable select options and parsers", () => {
+void test("OpenTUI action-scroll npm planners expose stable select options and parsers", () => {
   assert.deepEqual(WORKTREE_STACK_KIT_OPENTUI_UPDATE_MODE_OPTIONS, [
     {
       description: "Target existing live worktree",
@@ -61,7 +61,7 @@ test("OpenTUI action-scroll npm planners expose stable select options and parser
   assert.equal(WorktreeStackKit_parseOpenTuiExecutionMode(undefined), null);
 });
 
-test("OpenTUI npm preview options and selection plans are stable", () => {
+void test("OpenTUI npm preview options and selection plans are stable", () => {
   assert.deepEqual(
     WorktreeStackKit_buildOpenTuiNpmPreviewOptions({
       requiresConfirmToken: true,
@@ -102,7 +102,7 @@ test("OpenTUI npm preview options and selection plans are stable", () => {
   );
 });
 
-test("OpenTUI npm confirm options and selection plans are stable", () => {
+void test("OpenTUI npm confirm options and selection plans are stable", () => {
   assert.deepEqual(WorktreeStackKit_buildOpenTuiNpmConfirmOptions(), [
     {
       description: "Execute after token match",
@@ -137,7 +137,7 @@ test("OpenTUI npm confirm options and selection plans are stable", () => {
   );
 });
 
-test("OpenTUI action-scroll npm planners build start and destroy previews", () => {
+void test("OpenTUI action-scroll npm planners build start and destroy previews", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiStartNpmPreview({
       openWindsurf: true,
@@ -165,7 +165,7 @@ test("OpenTUI action-scroll npm planners build start and destroy previews", () =
   );
 });
 
-test("OpenTUI action-scroll npm planners build update and merge previews", () => {
+void test("OpenTUI action-scroll npm planners build update and merge previews", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiUpdateFromMainNpmPreview({
       executionMode: "push",

@@ -66,4 +66,3 @@ export type WorktreeStackKit_RunCreateCommandOptions<Context extends WorktreeSta
 };
 /** Runs the package-owned create command sequence using project-supplied adapter operations. */
 export declare function WorktreeStackKit_runCreateCommand<Context extends WorktreeStackKit_CreateCommandContext, ServiceRoot extends WorktreeStackKit_CreateCommandServiceRoot>(options: WorktreeStackKit_RunCreateCommandOptions<Context, ServiceRoot>): void;
-//# sourceMappingURL=create-command.d.ts.map

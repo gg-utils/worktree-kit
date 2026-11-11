@@ -62,4 +62,3 @@ export declare function WorktreeStackKit_findMatchingSwitchWorktree(options: {
 export declare function WorktreeStackKit_resolveSwitchEditorCommand(prefix: string, editorOverride: string): string | null;
 /** Runs the config-driven switch command and returns a process exit code. */
 export declare function WorktreeStackKit_runSwitchCommand(options: WorktreeStackKit_RunSwitchCommand_Options): number;
-//# sourceMappingURL=switch-command.d.ts.map

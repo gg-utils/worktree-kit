@@ -39,4 +39,3 @@ export interface WorktreeStackKit_OpenTuiActionScrollSwitchPanelProps {
 }
 /** Switch-flow form and preview panel for worktrees:switch. */
 export declare function WorktreeStackKit_OpenTuiActionScrollSwitchPanel(props: WorktreeStackKit_OpenTuiActionScrollSwitchPanelProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-switch-panel.d.ts.map

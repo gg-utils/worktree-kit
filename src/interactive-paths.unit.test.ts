@@ -27,7 +27,7 @@ import {
 
 const TEST_MARKER_SEGMENTS = ["scripts", "worktree-stack", "commands", "create.ts"];
 
-test("WorktreeStackKit_resolveInteractiveRepoRoot walks to the configured marker", () => {
+void test("WorktreeStackKit_resolveInteractiveRepoRoot walks to the configured marker", () => {
   const repoRoot = path.join(path.sep, "repo");
   const cwd = path.join(repoRoot, "nested", "leaf");
 
@@ -42,7 +42,7 @@ test("WorktreeStackKit_resolveInteractiveRepoRoot walks to the configured marker
   );
 });
 
-test("WorktreeStackKit_resolveInteractiveRepoRoot rejects missing markers", () => {
+void test("WorktreeStackKit_resolveInteractiveRepoRoot rejects missing markers", () => {
   assert.throws(
     () =>
       WorktreeStackKit_resolveInteractiveRepoRoot({
@@ -54,7 +54,7 @@ test("WorktreeStackKit_resolveInteractiveRepoRoot rejects missing markers", () =
   );
 });
 
-test("WorktreeStackKit_resolveInteractivePathContext builds configured paths", () => {
+void test("WorktreeStackKit_resolveInteractivePathContext builds configured paths", () => {
   const repoRoot = path.join(path.sep, "repo");
   const cwd = path.join(repoRoot, "nested");
 

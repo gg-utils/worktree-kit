@@ -206,4 +206,3 @@ export function WorktreeStackKit_printCreateBaseDebugContext(context) {
     worktreeStackPrintKv("machine-root", context.machineRoot);
     worktreeStackPrintKv("start-mode", context.options.startMode);
 }
-//# sourceMappingURL=create-cli-context.js.map

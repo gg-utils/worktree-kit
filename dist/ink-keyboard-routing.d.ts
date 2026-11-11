@@ -191,4 +191,3 @@ export declare function WorktreeStackKit_dispatchInkReviewScreenKeys<ActionPlan 
 }): void;
 /** Type guard-friendly helper for callers that need the shared action ids. */
 export declare function WorktreeStackKit_isInkKeyboardActionId(actionId: string): actionId is WorktreeStackKit_InkActionId;
-//# sourceMappingURL=ink-keyboard-routing.d.ts.map

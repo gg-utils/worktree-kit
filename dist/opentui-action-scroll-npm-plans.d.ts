@@ -106,4 +106,3 @@ export declare function WorktreeStackKit_planOpenTuiMergeNpmPreview(options: {
     readonly worktreePath: string;
 }): WorktreeStackKit_OpenTuiNpmRunPreviewPlan;
 export {};
-//# sourceMappingURL=opentui-action-scroll-npm-plans.d.ts.map

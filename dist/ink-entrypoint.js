@@ -123,4 +123,3 @@ export async function WorktreeStackKit_runInkEntrypoint({ appComponent, argv, cw
     }
     return 0;
 }
-//# sourceMappingURL=ink-entrypoint.js.map

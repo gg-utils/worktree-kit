@@ -112,4 +112,3 @@ function WorktreeStackKit_updateRecordPickIndex(options) {
         options.setRecordPickIndex(options.index);
     }
 }
-//# sourceMappingURL=opentui-app-shell-panels.js.map

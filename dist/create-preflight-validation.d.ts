@@ -72,4 +72,3 @@ export declare function WorktreeStackKit_validateGeneratedCreateArtifacts(option
     config: WorktreeStackKit_CreatePreflightConfig;
     context: WorktreeStackKit_CreatePreflightContext;
 }): void;
-//# sourceMappingURL=create-preflight-validation.d.ts.map

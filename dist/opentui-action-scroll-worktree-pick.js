@@ -85,4 +85,3 @@ export function WorktreeStackKit_planOpenTuiEmptyWorktreePickSelection(options) 
             return { type: "ignore" };
     }
 }
-//# sourceMappingURL=opentui-action-scroll-worktree-pick.js.map

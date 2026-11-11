@@ -34,7 +34,7 @@ import {
 } from "./ink-display-view-model.js";
 import { WorktreeStackKit_createInitialInkCreateDraft } from "./ink-create-model.js";
 
-test("Ink display helpers format command previews and confirmation input", () => {
+void test("Ink display helpers format command previews and confirmation input", () => {
   assert.equal(
     WorktreeStackKit_formatInkCliCommandLine({
       command: "npm",
@@ -58,7 +58,7 @@ test("Ink display helpers format command previews and confirmation input", () =>
   );
 });
 
-test("Ink display helpers map action/session/result tones", () => {
+void test("Ink display helpers map action/session/result tones", () => {
   assert.equal(
     WorktreeStackKit_getInkActionEditorKeyHint({ id: "repair" }),
     "Keys: space dry-run | i include package .env | l legacy missing-only alias | t all vs selected worktree | left/right action | enter review | esc back | q quit",
@@ -90,7 +90,7 @@ test("Ink display helpers map action/session/result tones", () => {
   assert.equal(WorktreeStackKit_getInkResultStatusTone("cancelled"), "warning");
 });
 
-test("Ink display helpers format create-region and create-field values", () => {
+void test("Ink display helpers format create-region and create-field values", () => {
   const draft = {
     ...WorktreeStackKit_createInitialInkCreateDraft(),
     stackName: "demo-stack",

@@ -175,4 +175,3 @@ export function WorktreeStackKit_planOpenTuiMenuActionSelection(options) {
         type: "transition",
     };
 }
-//# sourceMappingURL=opentui-shell-menu-actions.js.map

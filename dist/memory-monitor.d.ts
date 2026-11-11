@@ -173,4 +173,3 @@ export declare function memoryMonitorRenderSnapshot(options: {
  * in `finally`; returns a process exit code for harnesses.
  */
 export declare function WorktreeStackKit_runMemoryMonitorCommand(commandOptions: WorktreeStackKit_RunMemoryMonitorCommand_Options): Promise<number>;
-//# sourceMappingURL=memory-monitor.d.ts.map

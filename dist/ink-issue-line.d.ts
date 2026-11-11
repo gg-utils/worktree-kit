@@ -15,4 +15,3 @@ import React from "react";
 import type { WorktreeStackKit_InkUiIssue } from "./ink-ui-contracts.js";
 /** Render a single inventory or plan issue as colored Ink text. */
 export declare function WorktreeStackKit_renderInkIssueLine(issue: WorktreeStackKit_InkUiIssue): React.ReactNode;
-//# sourceMappingURL=ink-issue-line.d.ts.map

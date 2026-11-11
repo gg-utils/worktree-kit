@@ -16,7 +16,7 @@ import test from "node:test";
 
 import { WorktreeInteractiveCancelledError } from "./interactive-session.js";
 
-test("WorktreeInteractiveCancelledError keeps the stable cancellation message", () => {
+void test("WorktreeInteractiveCancelledError keeps the stable cancellation message", () => {
   const error = new WorktreeInteractiveCancelledError();
 
   assert.equal(error.message, "Interactive flow cancelled.");

@@ -79,4 +79,3 @@ export declare function WorktreeStackKit_createUpdateFromMainCommand(config: Wor
 export declare function WorktreeStackKit_runUpdateFromMainCli(options: WorktreeStackKit_RunUpdateFromMainCliOptions): Promise<number>;
 /** Runs a configured update-from-main workflow without callers needing to retain a command object. */
 export declare function WorktreeStackKit_runUpdateFromMain(options: WorktreeStackKit_RunUpdateFromMainOptions): Promise<number>;
-//# sourceMappingURL=update-from-main-command.d.ts.map

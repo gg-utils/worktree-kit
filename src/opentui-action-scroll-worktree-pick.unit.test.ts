@@ -26,7 +26,7 @@ import {
   WorktreeStackKit_shouldShowOpenTuiWorktreePick,
 } from "./opentui-action-scroll-worktree-pick.js";
 
-test("OpenTUI worktree pick visibility only covers record-scoped pick flows", () => {
+void test("OpenTUI worktree pick visibility only covers record-scoped pick flows", () => {
   assert.equal(
     WorktreeStackKit_shouldShowOpenTuiWorktreePick({
       flow: "start",
@@ -50,7 +50,7 @@ test("OpenTUI worktree pick visibility only covers record-scoped pick flows", ()
   );
 });
 
-test("OpenTUI worktree pick options include records, manual, continue, and nav rows", () => {
+void test("OpenTUI worktree pick options include records, manual, continue, and nav rows", () => {
   assert.deepEqual(
     WorktreeStackKit_buildOpenTuiWorktreePickOptions({
       records: [
@@ -82,7 +82,7 @@ test("OpenTUI worktree pick options include records, manual, continue, and nav r
   ]);
 });
 
-test("OpenTUI worktree pick selection planners map values to state transitions", () => {
+void test("OpenTUI worktree pick selection planners map values to state transitions", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiWorktreePickSelection({ optionValue: "2" }),
     { recordPickIndex: 2, type: "record" },

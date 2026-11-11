@@ -303,4 +303,3 @@ export function WorktreeStackKit_dispatchInkReviewScreenKeys(options) {
 export function WorktreeStackKit_isInkKeyboardActionId(actionId) {
     return WORKTREE_STACK_KIT_INK_ACTIONS.some((action) => action.id === actionId);
 }
-//# sourceMappingURL=ink-keyboard-routing.js.map

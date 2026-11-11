@@ -332,4 +332,3 @@ export function WorktreeStackKit_runZshAliasesCli(argv, config) {
         return 1;
     }
 }
-//# sourceMappingURL=zsh-aliases-integration.js.map

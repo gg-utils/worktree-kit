@@ -126,4 +126,3 @@ export function WorktreeStackKit_validateGeneratedCreateArtifacts(options) {
         worktreeStackRequireFile(path.join(context.worktreePath, requirement.relativePath), requirement.description);
     }
 }
-//# sourceMappingURL=create-preflight-validation.js.map

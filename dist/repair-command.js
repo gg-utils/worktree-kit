@@ -369,4 +369,3 @@ function WorktreeStackKit_validateRepairGeneratedArtifacts(options) {
         worktreeStackRequireFile(path.join(options.worktreePath, requirement.relativePath), requirement.description);
     }
 }
-//# sourceMappingURL=repair-command.js.map

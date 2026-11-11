@@ -19,7 +19,7 @@ import test from "node:test";
 
 import { WorktreeStackKit_startOpenTuiChildProcess } from "./opentui-child-process.js";
 
-test("WorktreeStackKit_startOpenTuiChildProcess aggregates streamed output", async () => {
+void test("WorktreeStackKit_startOpenTuiChildProcess aggregates streamed output", async () => {
   const chunks: string[] = [];
   const run = WorktreeStackKit_startOpenTuiChildProcess({
     args: [

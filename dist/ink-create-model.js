@@ -279,4 +279,3 @@ export function WorktreeStackKit_getInkSwitchFieldsForSection(sectionId) {
 export function WorktreeStackKit_isInkSwitchBooleanField(fieldId) {
     return WORKTREE_STACK_KIT_INK_SWITCH_FIELDS.some((field) => field.id === fieldId && field.kind === "boolean");
 }
-//# sourceMappingURL=ink-create-model.js.map

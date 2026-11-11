@@ -604,4 +604,3 @@ function WorktreeStateCheck_printTable(rows) {
         console.log(`| ${line} |`);
     }
 }
-//# sourceMappingURL=state-check.js.map

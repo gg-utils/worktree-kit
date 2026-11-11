@@ -96,4 +96,3 @@ export declare function WorktreeStackKit_buildInkSwitchInteractivePlan(options: 
     readonly selectedRecord: WorktreeStackKit_InkUiRecord | null;
     readonly switchDraft: WorktreeStackKit_InkUiSwitchDraft;
 }): WorktreeStackKit_InkUiActionRequestPlan;
-//# sourceMappingURL=ink-create-switch-plans.d.ts.map

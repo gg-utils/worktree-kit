@@ -49,4 +49,3 @@ import type { TabSelectProps } from "@opentui/react";
  * ```
  */
 export declare function WorktreeStackKit_OpenTuiAutoFocusTabSelect(props: TabSelectProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-auto-focus-tab-select.d.ts.map

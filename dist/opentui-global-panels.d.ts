@@ -63,4 +63,3 @@ export declare function WorktreeStackKit_OpenTuiActionScrollPruneStalePanel(prop
 /** Renders streaming output and post-run result navigation for non-menu flows. */
 export declare function WorktreeStackKit_OpenTuiActionScrollRunAndResultPanels(props: WorktreeStackKit_OpenTuiActionScrollRunAndResultPanelsProps): import("react").ReactNode;
 export {};
-//# sourceMappingURL=opentui-global-panels.d.ts.map

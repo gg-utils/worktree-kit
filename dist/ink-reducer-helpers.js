@@ -880,4 +880,3 @@ export function WorktreeStackKit_applyInkStartSessionAction(options) {
         screen: "session",
     };
 }
-//# sourceMappingURL=ink-reducer-helpers.js.map

@@ -34,7 +34,7 @@ import {
   WorktreeStackKit_shouldShowOpenTuiCreatePreviewPanel,
 } from "./opentui-create-wizard-form-plans.js";
 
-test("OpenTUI create form model uses explicit project defaults", () => {
+void test("OpenTUI create form model uses explicit project defaults", () => {
   const model = WorktreeStackKit_createOpenTuiCreateFormModel({
     baseBranch: "main",
     metadataSource: "configured-source",
@@ -49,7 +49,7 @@ test("OpenTUI create form model uses explicit project defaults", () => {
   assert.equal(model.startMode, "none");
 });
 
-test("OpenTUI create field catalogs preserve wizard order", () => {
+void test("OpenTUI create field catalogs preserve wizard order", () => {
   const textFields = WorktreeStackKit_buildOpenTuiCreateTextFields({
     baseBranchDefaultLabel: "main",
     rootBranchDefaultLabel: "codex/<name>",
@@ -95,7 +95,7 @@ test("OpenTUI create field catalogs preserve wizard order", () => {
   );
 });
 
-test("OpenTUI create text helpers read and update model fields", () => {
+void test("OpenTUI create text helpers read and update model fields", () => {
   const model = WorktreeStackKit_createOpenTuiCreateFormModel({
     baseBranch: "main",
     metadataSource: "worktree-stack",
@@ -123,7 +123,7 @@ test("OpenTUI create text helpers read and update model fields", () => {
   );
 });
 
-test("OpenTUI create select helper updates booleans and start mode", () => {
+void test("OpenTUI create select helper updates booleans and start mode", () => {
   const model = WorktreeStackKit_createOpenTuiCreateFormModel({
     baseBranch: "main",
     metadataSource: "worktree-stack",
@@ -157,7 +157,7 @@ test("OpenTUI create select helper updates booleans and start mode", () => {
   assert.equal(unchanged, withTerminal);
 });
 
-test("OpenTUI create preview planner maps visibility and navigation", () => {
+void test("OpenTUI create preview planner maps visibility and navigation", () => {
   assert.equal(
     WorktreeStackKit_shouldShowOpenTuiCreatePreviewPanel({
       flow: "create",
@@ -186,7 +186,7 @@ test("OpenTUI create preview planner maps visibility and navigation", () => {
   );
 });
 
-test("OpenTUI create form planner maps continue, menu, and quit navigation", () => {
+void test("OpenTUI create form planner maps continue, menu, and quit navigation", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiCreateFormSelection({ optionValue: "next" }),
     { type: "preview" },

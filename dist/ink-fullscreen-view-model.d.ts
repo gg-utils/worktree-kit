@@ -181,4 +181,3 @@ export declare function WorktreeStackKit_buildInkFullscreenResultModel(options: 
     readonly actionPlan: WorktreeStackKit_InkUiActionRequestPlan;
     readonly result: WorktreeStackKit_InkUiResultModel;
 }): WorktreeStackKit_InkFullscreenResultModel;
-//# sourceMappingURL=ink-fullscreen-view-model.d.ts.map

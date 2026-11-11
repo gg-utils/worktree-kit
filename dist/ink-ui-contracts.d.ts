@@ -402,4 +402,3 @@ export type WorktreeStackKit_InkUiAction = {
 } | {
     type: "refresh-requested";
 };
-//# sourceMappingURL=ink-ui-contracts.d.ts.map

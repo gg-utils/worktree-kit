@@ -40,4 +40,3 @@ export declare function WorktreeStackKit_detectLocalDirectories(options: Worktre
 export declare function WorktreeStackKit_syncLocalFilesIntoTarget(options: WorktreeStackKit_SyncLocalFilesIntoTarget_Options): void;
 /** Syncs configured and detected local directories from the source workspace into the target. */
 export declare function WorktreeStackKit_syncLocalDirectoriesIntoTarget(options: WorktreeStackKit_SyncLocalDirectoriesIntoTarget_Options): void;
-//# sourceMappingURL=local-state-sync.d.ts.map

@@ -122,4 +122,3 @@ export interface WorktreeStackKit_OpenTuiActionScrollProps extends WorktreeStack
 }
 /** Renders the stacked wizard/runner panels shown when a main-menu action is active. */
 export declare function WorktreeStackKit_OpenTuiActionScroll(props: WorktreeStackKit_OpenTuiActionScrollProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-action-scroll.d.ts.map

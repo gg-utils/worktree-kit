@@ -18,7 +18,7 @@ import React from "react";
 
 import { WorktreeStackKit_InkApp } from "./ink-app.js";
 
-test("exports the package-owned Ink app component", () => {
+void test("exports the package-owned Ink app component", () => {
   const element = React.createElement(WorktreeStackKit_InkApp, {
     buildActionPlan: () => {
       throw new Error("buildActionPlan should not run during element creation");

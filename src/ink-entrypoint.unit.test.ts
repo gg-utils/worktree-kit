@@ -23,7 +23,7 @@ import {
   WorktreeStackKit_resolveInkKittyKeyboardMode,
 } from "./ink-entrypoint.js";
 
-test("WorktreeStackKit_resolveInkEntrypointRequest returns help before TTY checks", () => {
+void test("WorktreeStackKit_resolveInkEntrypointRequest returns help before TTY checks", () => {
   const request = WorktreeStackKit_resolveInkEntrypointRequest({
     argv: ["--help"],
     stdinIsTty: false,
@@ -38,7 +38,7 @@ test("WorktreeStackKit_resolveInkEntrypointRequest returns help before TTY check
   assert.match(request.helpText, /Usage: npm run worktrees:cli:ink/);
 });
 
-test("WorktreeStackKit_resolveInkEntrypointRequest rejects non-TTY launches", () => {
+void test("WorktreeStackKit_resolveInkEntrypointRequest rejects non-TTY launches", () => {
   const request = WorktreeStackKit_resolveInkEntrypointRequest({
     argv: [],
     stdinIsTty: true,
@@ -53,7 +53,7 @@ test("WorktreeStackKit_resolveInkEntrypointRequest rejects non-TTY launches", ()
   assert.equal(request.message, "worktrees:cli:ink requires an interactive TTY.");
 });
 
-test("WorktreeStackKit_resolveInkEntrypointRequest launches with parsed target", () => {
+void test("WorktreeStackKit_resolveInkEntrypointRequest launches with parsed target", () => {
   const request = WorktreeStackKit_resolveInkEntrypointRequest({
     argv: ["--action", "start"],
     stdinIsTty: true,
@@ -67,7 +67,7 @@ test("WorktreeStackKit_resolveInkEntrypointRequest launches with parsed target",
   assert.equal(request.launchTarget?.actionId, "start");
 });
 
-test("WorktreeStackKit_resolveInkKittyKeyboardMode maps opt-in env", () => {
+void test("WorktreeStackKit_resolveInkKittyKeyboardMode maps opt-in env", () => {
   assert.equal(
     WorktreeStackKit_resolveInkKittyKeyboardMode({
       WORKTREE_INK_KITTY_KEYBOARD: "1",

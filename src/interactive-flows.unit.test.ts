@@ -121,7 +121,7 @@ function buildTestConfig(
   };
 }
 
-test("WorktreeStackKit_runInteractiveMain exits without running commands", async () => {
+void test("WorktreeStackKit_runInteractiveMain exits without running commands", async () => {
   const capturedSpecs: WorktreeStackKit_UiCommandSpec[] = [];
   const session = new FakeInteractiveFlowSession([11]);
 
@@ -134,7 +134,7 @@ test("WorktreeStackKit_runInteractiveMain exits without running commands", async
   assert.deepEqual(session.successes, ["Leaving the worktree console."]);
 });
 
-test("WorktreeStackKit_runInteractiveMain dispatches configured npm scripts", async () => {
+void test("WorktreeStackKit_runInteractiveMain dispatches configured npm scripts", async () => {
   const capturedSpecs: WorktreeStackKit_UiCommandSpec[] = [];
   const session = new FakeInteractiveFlowSession([6, 11]);
 
@@ -149,7 +149,7 @@ test("WorktreeStackKit_runInteractiveMain dispatches configured npm scripts", as
   assert.deepEqual(session.commands, ["realm:list"]);
 });
 
-test("WorktreeStackKit_runInteractivePool previews the next realm through configured script", async () => {
+void test("WorktreeStackKit_runInteractivePool previews the next realm through configured script", async () => {
   const capturedSpecs: WorktreeStackKit_UiCommandSpec[] = [];
   const session = new FakeInteractiveFlowSession([4, 5], ["stack-a"]);
 
@@ -170,7 +170,7 @@ test("WorktreeStackKit_runInteractivePool previews the next realm through config
   ]);
 });
 
-test("WorktreeStackKit_bindInteractiveFlowRunners reuses the bound config", async () => {
+void test("WorktreeStackKit_bindInteractiveFlowRunners reuses the bound config", async () => {
   const capturedSpecs: WorktreeStackKit_UiCommandSpec[] = [];
   const session = new FakeInteractiveFlowSession([6, 11]);
   const runners = WorktreeStackKit_bindInteractiveFlowRunners({

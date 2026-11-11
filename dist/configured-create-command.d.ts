@@ -70,4 +70,3 @@ export type WorktreeStackKit_RunConfiguredCreateCommandOptions = {
 };
 /** Runs a prepared-worktree create command from explicit reusable config and project hooks. */
 export declare function WorktreeStackKit_runConfiguredCreateCommand(options: WorktreeStackKit_RunConfiguredCreateCommandOptions): void;
-//# sourceMappingURL=configured-create-command.d.ts.map

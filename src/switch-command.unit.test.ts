@@ -38,7 +38,7 @@ const switchCommandTestConfig: WorktreeStackKit_SwitchCommandConfig = {
   ],
 };
 
-test("WorktreeStackKit_parseSwitchArgs parses direct switch options", () => {
+void test("WorktreeStackKit_parseSwitchArgs parses direct switch options", () => {
   const parsed = WorktreeStackKit_parseSwitchArgs({
     argv: ["--prefix", "Claude", "--name", "fix-auth", "--slot", "7", "--dry-run"],
     config: switchCommandTestConfig,
@@ -55,7 +55,7 @@ test("WorktreeStackKit_parseSwitchArgs parses direct switch options", () => {
   });
 });
 
-test("WorktreeStackKit_parseSwitchArgs allows interactive mode without a stack name", () => {
+void test("WorktreeStackKit_parseSwitchArgs allows interactive mode without a stack name", () => {
   const parsed = WorktreeStackKit_parseSwitchArgs({
     argv: ["--interactive", "--environment", "sandbox"],
     config: switchCommandTestConfig,
@@ -66,7 +66,7 @@ test("WorktreeStackKit_parseSwitchArgs allows interactive mode without a stack n
   assert.equal(parsed?.stackName, "");
 });
 
-test("WorktreeStackKit_findMatchingSwitchWorktree matches by prefix and stack name", () => {
+void test("WorktreeStackKit_findMatchingSwitchWorktree matches by prefix and stack name", () => {
   const match = WorktreeStackKit_findMatchingSwitchWorktree({
     branchPrefix: "codex",
     stackName: "fix-auth",
@@ -79,13 +79,13 @@ test("WorktreeStackKit_findMatchingSwitchWorktree matches by prefix and stack na
   assert.equal(match?.worktreePath, "/b");
 });
 
-test("WorktreeStackKit_resolveSwitchEditorCommand respects overrides and prefix mapping", () => {
+void test("WorktreeStackKit_resolveSwitchEditorCommand respects overrides and prefix mapping", () => {
   assert.equal(WorktreeStackKit_resolveSwitchEditorCommand("claude", ""), "claude --cwd <PATH>");
   assert.equal(WorktreeStackKit_resolveSwitchEditorCommand("codex", ""), null);
   assert.equal(WorktreeStackKit_resolveSwitchEditorCommand("codex", "code <PATH>"), "code <PATH>");
 });
 
-test("WorktreeStackKit_renderSwitchUsage includes configured command lines", () => {
+void test("WorktreeStackKit_renderSwitchUsage includes configured command lines", () => {
   const text = WorktreeStackKit_renderSwitchUsage(switchCommandTestConfig);
   assert.match(text, /npm run worktrees:switch/u);
   assert.match(text, /tool switch/u);

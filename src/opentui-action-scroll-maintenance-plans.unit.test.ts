@@ -42,7 +42,7 @@ import {
   WorktreeStackKit_shouldShowOpenTuiSyncPreviewPanel,
 } from "./opentui-action-scroll-maintenance-plans.js";
 
-test("OpenTUI maintenance visibility helpers match repair, sync, and bootstrap phases", () => {
+void test("OpenTUI maintenance visibility helpers match repair, sync, and bootstrap phases", () => {
   assert.equal(
     WorktreeStackKit_shouldShowOpenTuiRepairFormPanel({
       flow: "repair",
@@ -94,7 +94,7 @@ test("OpenTUI maintenance visibility helpers match repair, sync, and bootstrap p
   );
 });
 
-test("OpenTUI maintenance option builders keep stable labels", () => {
+void test("OpenTUI maintenance option builders keep stable labels", () => {
   assert.deepEqual(
     WorktreeStackKit_buildOpenTuiRepairIncludePackageEnvOptions(),
     [
@@ -137,7 +137,7 @@ test("OpenTUI maintenance option builders keep stable labels", () => {
   );
 });
 
-test("OpenTUI maintenance selection planners map select values to side-effect plans", () => {
+void test("OpenTUI maintenance selection planners map select values to side-effect plans", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiRepairBooleanSelection({
       field: "dryRun",
@@ -174,7 +174,7 @@ test("OpenTUI maintenance selection planners map select values to side-effect pl
   );
 });
 
-test("OpenTUI bootstrap formatter uses explicit seed facts", () => {
+void test("OpenTUI bootstrap formatter uses explicit seed facts", () => {
   assert.equal(
     WorktreeStackKit_formatOpenTuiBootstrapFormText({
       installDescription: "Runs configured install steps.",

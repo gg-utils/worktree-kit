@@ -77,4 +77,3 @@ export declare function WorktreeStackKit_printZshAliasesUsage(config: WorktreeSt
 export declare function WorktreeStackKit_parseZshAliasesCliArgs(argv: readonly string[], config: WorktreeStackKit_ZshAliasesCliConfig): WorktreeStackKit_ZshAliasesOptions;
 /** CLI entrypoint that parses argv then delegates to `WorktreeStackKit_runZshAliases`. */
 export declare function WorktreeStackKit_runZshAliasesCli(argv: readonly string[], config: WorktreeStackKit_ZshAliasesCliConfig): number;
-//# sourceMappingURL=zsh-aliases-integration.d.ts.map

@@ -20,4 +20,3 @@ export declare function WorktreeStackKit_buildInkResultModel(options: {
     readonly executionResult: WorktreeStackKit_InkTaskExecutionResult;
     readonly plan: WorktreeStackKit_InkUiActionRequestPlan;
 }): WorktreeStackKit_InkUiResultModel;
-//# sourceMappingURL=ink-result-model.d.ts.map

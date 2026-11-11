@@ -75,7 +75,7 @@ const INVENTORY: WorktreeStackKit_InkShellInventoryInput = {
   },
 };
 
-test("Ink shell view models build header, selected record, and record rows", () => {
+void test("Ink shell view models build header, selected record, and record rows", () => {
   assert.equal(
     WorktreeStackKit_buildInkShellHeaderSummary({ summary: INVENTORY.summary }),
     "Worktrees: 1 | Ready: 1 | Issues: 1",
@@ -108,7 +108,7 @@ test("Ink shell view models build header, selected record, and record rows", () 
   );
 });
 
-test("Ink shell view models build action rows and overview stats", () => {
+void test("Ink shell view models build action rows and overview stats", () => {
   assert.deepEqual(
     WorktreeStackKit_buildInkShellActionListModel({
       actionDefinitions: [
@@ -154,7 +154,7 @@ test("Ink shell view models build action rows and overview stats", () => {
   );
 });
 
-test("Ink shell view models build detail and issue models", () => {
+void test("Ink shell view models build detail and issue models", () => {
   const detail = WorktreeStackKit_buildInkShellDetailModel({ record: RECORD });
   assert.equal(detail.empty, false);
   if (!detail.empty) {
@@ -209,7 +209,7 @@ test("Ink shell view models build detail and issue models", () => {
   );
 });
 
-test("Ink shell view models build focus-aware legend lines", () => {
+void test("Ink shell view models build focus-aware legend lines", () => {
   assert.deepEqual(
     WorktreeStackKit_buildInkShellLegendLines({
       createInteractionMode: "browse",

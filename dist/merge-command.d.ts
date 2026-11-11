@@ -73,4 +73,3 @@ export type WorktreeMergeOptions = {
 /** Renders merge CLI usage from project-supplied command lines. */
 export declare function WorktreeStackKit_renderMergeUsage(config: WorktreeStackKit_MergeCommandConfig): string;
 export declare function WorktreeStackKit_createMergeCommand(config: WorktreeStackKit_MergeCommandConfig): WorktreeStackKit_MergeCommand;
-//# sourceMappingURL=merge-command.d.ts.map

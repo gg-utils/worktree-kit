@@ -127,4 +127,3 @@ export declare function WorktreeStackKit_resolveEnvDoctorWorkspacePath(options: 
 /** Reads and narrowly validates an overlay validation artifact on disk. */
 export declare function WorktreeStackKit_parseEnvDoctorOverlayArtifact(artifactPath: string): WorktreeStackKit_EnvDoctorOverlayArtifact | null;
 export {};
-//# sourceMappingURL=env-doctor-command.d.ts.map

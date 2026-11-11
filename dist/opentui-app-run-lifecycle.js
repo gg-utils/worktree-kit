@@ -60,4 +60,3 @@ async function WorktreeStackKit_resolveOpenTuiRunStartResult(options) {
     options.callbacks.setCancelRun(null);
     return result;
 }
-//# sourceMappingURL=opentui-app-run-lifecycle.js.map

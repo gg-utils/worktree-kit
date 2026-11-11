@@ -25,4 +25,3 @@ export type WorktreeStackKit_DeriveSlotPortMapOptions<PortKey extends string> = 
 };
 /** Derives a map of configured port keys to their slot-shifted port values. */
 export declare function WorktreeStackKit_deriveSlotPortMap<PortKey extends string>(options: WorktreeStackKit_DeriveSlotPortMapOptions<PortKey>): Map<PortKey, number>;
-//# sourceMappingURL=slot-ports.d.ts.map

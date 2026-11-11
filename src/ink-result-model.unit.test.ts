@@ -73,7 +73,7 @@ function createPlan(
   };
 }
 
-test("WorktreeStackKit_buildInkResultModel marks plan-mode success", () => {
+void test("WorktreeStackKit_buildInkResultModel marks plan-mode success", () => {
   const plan = createPlan({
     actionId: "update-from-main",
     actionLabel: "Update from main",
@@ -94,7 +94,7 @@ test("WorktreeStackKit_buildInkResultModel marks plan-mode success", () => {
   assert.equal(result.createHandoff, null);
 });
 
-test("WorktreeStackKit_buildInkResultModel reclassifies repo-root sync blockers", () => {
+void test("WorktreeStackKit_buildInkResultModel reclassifies repo-root sync blockers", () => {
   const result = WorktreeStackKit_buildInkResultModel({
     executionResult: createExecutionResult({
       status: "failed",
@@ -115,7 +115,7 @@ test("WorktreeStackKit_buildInkResultModel reclassifies repo-root sync blockers"
   assert.equal(result.refreshRequested, false);
 });
 
-test("WorktreeStackKit_buildInkResultModel surfaces preserved temp-worktree evidence", () => {
+void test("WorktreeStackKit_buildInkResultModel surfaces preserved temp-worktree evidence", () => {
   const plan = createPlan({
     actionId: "update-from-main",
     actionLabel: "Update from main",

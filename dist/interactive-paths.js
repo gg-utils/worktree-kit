@@ -50,4 +50,3 @@ export function WorktreeStackKit_resolveInteractivePathContext(options) {
         uiDir: path.join(repoRoot, ...options.uiSegments),
     };
 }
-//# sourceMappingURL=interactive-paths.js.map

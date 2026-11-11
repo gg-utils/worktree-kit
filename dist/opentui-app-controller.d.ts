@@ -67,4 +67,3 @@ export interface WorktreeStackKit_OpenTuiAppControllerResult {
 /** Creates the reusable OpenTUI shell controller while keeping project I/O injected by scripts. */
 export declare function WorktreeStackKit_useOpenTuiAppController<TPorts extends Readonly<Record<string, number>>>(options: WorktreeStackKit_OpenTuiAppControllerOptions<TPorts>): WorktreeStackKit_OpenTuiAppControllerResult;
 export {};
-//# sourceMappingURL=opentui-app-controller.d.ts.map

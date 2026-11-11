@@ -193,4 +193,3 @@ export function WorktreeStackKit_formatOpenTuiCreatePreviewText(options) {
         options.preview.envSummary,
     ].join("\n");
 }
-//# sourceMappingURL=opentui-create-preview.js.map

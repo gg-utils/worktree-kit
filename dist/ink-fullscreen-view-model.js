@@ -327,4 +327,3 @@ function WorktreeStackKit_buildInkFullscreenCreateHandoffModel(createHandoff) {
         statusTone: createHandoff.status === "resolved" ? "ready" : "warning",
     };
 }
-//# sourceMappingURL=ink-fullscreen-view-model.js.map

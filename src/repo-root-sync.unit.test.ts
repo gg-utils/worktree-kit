@@ -48,7 +48,7 @@ function repoRootSyncTestConfig(
   };
 }
 
-test("WorktreeStackKit_syncRepoRootTargetCheckout skips non-main targets without git I/O", () => {
+void test("WorktreeStackKit_syncRepoRootTargetCheckout skips non-main targets without git I/O", () => {
   const missingRoot = path.join(os.tmpdir(), "worktree-kit-missing-root");
   assert.doesNotThrow(() => {
     WorktreeStackKit_syncRepoRootTargetCheckout({
@@ -59,7 +59,7 @@ test("WorktreeStackKit_syncRepoRootTargetCheckout skips non-main targets without
   });
 });
 
-test("WorktreeStackKit_syncRequiredSubmoduleBranches skips missing configured paths", () => {
+void test("WorktreeStackKit_syncRequiredSubmoduleBranches skips missing configured paths", () => {
   const sandboxRoot = fs.mkdtempSync(
     path.join(os.tmpdir(), "worktree-kit-root-sync-"),
   );

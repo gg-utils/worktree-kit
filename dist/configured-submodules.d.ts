@@ -46,4 +46,3 @@ export declare function WorktreeStackKit_listConfiguredSubmodulePaths(options: W
 export declare function WorktreeStackKit_updateConfiguredSubmodules(options: WorktreeStackKit_UpdateConfiguredSubmodules_Options): void;
 /** Syncs all configured submodules to their expected branches using the specified sync mode. */
 export declare function WorktreeStackKit_syncConfiguredSubmoduleBranches(options: WorktreeStackKit_SyncConfiguredSubmoduleBranches_Options): void;
-//# sourceMappingURL=configured-submodules.d.ts.map

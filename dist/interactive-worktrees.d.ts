@@ -46,4 +46,3 @@ export declare function WorktreeStackKit_collectInteractiveUsedSlots(worktrees: 
 export declare function WorktreeStackKit_pickNextInteractiveSlot(usedSlots: readonly number[]): number;
 /** Resolves a user-supplied filesystem path to its realpath after verifying it exists. */
 export declare function WorktreeStackKit_resolveExistingInteractivePath(inputPath: string): string;
-//# sourceMappingURL=interactive-worktrees.d.ts.map

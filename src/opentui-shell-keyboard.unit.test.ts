@@ -59,7 +59,7 @@ function createKeyboardOptions(options: {
   };
 }
 
-test("OpenTUI keyboard helper focuses the active menu column", () => {
+void test("OpenTUI keyboard helper focuses the active menu column", () => {
   const events: string[] = [];
   WorktreeStackKit_focusOpenTuiTabsForMenuColumn({
     actionsTabRef: createFocusableRef(events, "actions"),
@@ -69,7 +69,7 @@ test("OpenTUI keyboard helper focuses the active menu column", () => {
   assert.deepEqual(events, ["worktrees:blur", "actions:focus"]);
 });
 
-test("OpenTUI keyboard helper rotates columns and preserves focus order", () => {
+void test("OpenTUI keyboard helper rotates columns and preserves focus order", () => {
   const events: string[] = [];
   const selectedColumns: WorktreeStackKit_OpenTuiMenuColumn[] = [];
 
@@ -85,7 +85,7 @@ test("OpenTUI keyboard helper rotates columns and preserves focus order", () => 
   assert.deepEqual(events, ["preventDefault", "worktrees:blur", "actions:focus"]);
 });
 
-test("OpenTUI keyboard helper escapes non-menu flows without column routing", () => {
+void test("OpenTUI keyboard helper escapes non-menu flows without column routing", () => {
   const events: string[] = [];
   const selectedColumns: WorktreeStackKit_OpenTuiMenuColumn[] = [];
   const options = createKeyboardOptions({

@@ -64,7 +64,7 @@ function createConfig(): WorktreeStackKit_StateCheckConfig {
   };
 }
 
-test("WorktreeStateCheck_parseArgs parses fetch and help flags", () => {
+void test("WorktreeStateCheck_parseArgs parses fetch and help flags", () => {
   assert.deepEqual(WorktreeStateCheck_parseArgs(["--fetch"]), {
     fetch: true,
     help: false,
@@ -75,7 +75,7 @@ test("WorktreeStateCheck_parseArgs parses fetch and help flags", () => {
   });
 });
 
-test("WorktreeStateCheck_parseStatusV2 extracts branch and dirtiness", () => {
+void test("WorktreeStateCheck_parseStatusV2 extracts branch and dirtiness", () => {
   assert.deepEqual(
     WorktreeStateCheck_parseStatusV2(
       createCommandResult({
@@ -93,7 +93,7 @@ test("WorktreeStateCheck_parseStatusV2 extracts branch and dirtiness", () => {
   );
 });
 
-test("WorktreeStateCheck_formatRevListResult maps counts and missing refs", () => {
+void test("WorktreeStateCheck_formatRevListResult maps counts and missing refs", () => {
   assert.deepEqual(WorktreeStateCheck_parseAheadBehind("2\t3\n"), {
     ahead: 2,
     behind: 3,
@@ -112,7 +112,7 @@ test("WorktreeStateCheck_formatRevListResult maps counts and missing refs", () =
   );
 });
 
-test("WorktreeStateCheck_parseSubmoduleStatusOutput records path prefixes", () => {
+void test("WorktreeStateCheck_parseSubmoduleStatusOutput records path prefixes", () => {
   assert.deepEqual(
     WorktreeStateCheck_parseSubmoduleStatusOutput(
       createCommandResult({
@@ -128,7 +128,7 @@ test("WorktreeStateCheck_parseSubmoduleStatusOutput records path prefixes", () =
   );
 });
 
-test("WorktreeStateCheck_resolveSubmoduleStatusFromState formats status cells", () => {
+void test("WorktreeStateCheck_resolveSubmoduleStatusFromState formats status cells", () => {
   const cleanState: WorktreeStateCheck_RepoState = {
     actualCheckout: "main",
     isDirty: false,
@@ -151,7 +151,7 @@ test("WorktreeStateCheck_resolveSubmoduleStatusFromState formats status cells", 
   );
 });
 
-test("WorktreeStateCheck_buildRootRowFromState applies expected checkout context", () => {
+void test("WorktreeStateCheck_buildRootRowFromState applies expected checkout context", () => {
   assert.deepEqual(
     WorktreeStateCheck_buildRootRowFromState(
       {
@@ -177,7 +177,7 @@ test("WorktreeStateCheck_buildRootRowFromState applies expected checkout context
   );
 });
 
-test("WorktreeStackKit_runStateCheckCommand prints configured help", async () => {
+void test("WorktreeStackKit_runStateCheckCommand prints configured help", async () => {
   const originalLog = console.log;
   const lines: string[] = [];
   try {

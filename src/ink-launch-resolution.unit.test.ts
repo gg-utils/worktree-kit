@@ -132,7 +132,7 @@ function createUiInventory(): WorktreeStackKit_InkUiInventory {
   };
 }
 
-test("WorktreeStackKit_resolveInkLaunchTarget returns shell defaults without a target", () => {
+void test("WorktreeStackKit_resolveInkLaunchTarget returns shell defaults without a target", () => {
   assert.deepEqual(
     WorktreeStackKit_resolveInkLaunchTarget({
       actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
@@ -151,7 +151,7 @@ test("WorktreeStackKit_resolveInkLaunchTarget returns shell defaults without a t
   );
 });
 
-test("WorktreeStackKit_resolveInkLaunchTarget selects record actions by stack name", () => {
+void test("WorktreeStackKit_resolveInkLaunchTarget selects record actions by stack name", () => {
   const resolved = WorktreeStackKit_resolveInkLaunchTarget({
     actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
     initialCreateDraft: createInitialCreateDraft(),
@@ -173,7 +173,7 @@ test("WorktreeStackKit_resolveInkLaunchTarget selects record actions by stack na
   assert.equal(resolved.noticeMessage, null);
 });
 
-test("WorktreeStackKit_createInkLaunchTargetResolver binds UI inventory translation", () => {
+void test("WorktreeStackKit_createInkLaunchTargetResolver binds UI inventory translation", () => {
   const resolveLaunchTarget = WorktreeStackKit_createInkLaunchTargetResolver({
     actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
     createInitialCreateDraft,
@@ -202,7 +202,7 @@ test("WorktreeStackKit_createInkLaunchTargetResolver binds UI inventory translat
   });
 });
 
-test("WorktreeStackKit_resolveInkLaunchTarget resolves relative worktree paths", () => {
+void test("WorktreeStackKit_resolveInkLaunchTarget resolves relative worktree paths", () => {
   const resolved = WorktreeStackKit_resolveInkLaunchTarget({
     actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
     initialCreateDraft: createInitialCreateDraft(),
@@ -222,7 +222,7 @@ test("WorktreeStackKit_resolveInkLaunchTarget resolves relative worktree paths",
   assert.equal(resolved.screen, "action-editor");
 });
 
-test("WorktreeStackKit_resolveInkLaunchTarget keeps shell for missing record target", () => {
+void test("WorktreeStackKit_resolveInkLaunchTarget keeps shell for missing record target", () => {
   const resolved = WorktreeStackKit_resolveInkLaunchTarget({
     actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
     initialCreateDraft: createInitialCreateDraft(),
@@ -243,7 +243,7 @@ test("WorktreeStackKit_resolveInkLaunchTarget keeps shell for missing record tar
   assert.match(resolved.noticeMessage ?? "", /missing/);
 });
 
-test("WorktreeStackKit_resolveInkLaunchTarget ignores record selectors for global actions", () => {
+void test("WorktreeStackKit_resolveInkLaunchTarget ignores record selectors for global actions", () => {
   const resolved = WorktreeStackKit_resolveInkLaunchTarget({
     actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
     initialCreateDraft: createInitialCreateDraft(),
@@ -265,7 +265,7 @@ test("WorktreeStackKit_resolveInkLaunchTarget ignores record selectors for globa
   assert.match(resolved.noticeMessage ?? "", /global/);
 });
 
-test("WorktreeStackKit_resolveInkLaunchTarget emits action option patches", () => {
+void test("WorktreeStackKit_resolveInkLaunchTarget emits action option patches", () => {
   const poolResolved = WorktreeStackKit_resolveInkLaunchTarget({
     actionDefinitions: WORKTREE_STACK_KIT_TEST_ACTIONS,
     initialCreateDraft: createInitialCreateDraft(),

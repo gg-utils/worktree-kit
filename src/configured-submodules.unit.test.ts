@@ -60,7 +60,7 @@ function writeGitmodules(rootDir: string): void {
   );
 }
 
-test("WorktreeStackKit_listConfiguredSubmodules reads .gitmodules branches", () => {
+void test("WorktreeStackKit_listConfiguredSubmodules reads .gitmodules branches", () => {
   const rootDir = fs.mkdtempSync(path.join(os.tmpdir(), "worktree-kit-submodules-"));
   try {
     writeGitmodules(rootDir);
@@ -91,7 +91,7 @@ test("WorktreeStackKit_listConfiguredSubmodules reads .gitmodules branches", () 
   }
 });
 
-test("WorktreeStackKit_listConfiguredSubmodules applies metadata branch override", () => {
+void test("WorktreeStackKit_listConfiguredSubmodules applies metadata branch override", () => {
   const rootDir = fs.mkdtempSync(path.join(os.tmpdir(), "worktree-kit-submodule-override-"));
   try {
     writeGitmodules(rootDir);

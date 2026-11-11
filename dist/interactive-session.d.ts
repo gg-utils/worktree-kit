@@ -208,4 +208,3 @@ export declare function worktreeInteractiveEnsureInteractiveStdio(): void;
  * I/O: Always closes the readline interface in `finally` to release stdin listeners.
  */
 export declare function worktreeInteractiveRunEntryPoint(run: (session: WorktreeInteractiveSession) => Promise<void>): Promise<void>;
-//# sourceMappingURL=interactive-session.d.ts.map

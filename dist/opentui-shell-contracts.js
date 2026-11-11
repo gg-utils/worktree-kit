@@ -72,4 +72,3 @@ export function WorktreeStackKit_openTuiNavTabs(options) {
     tabs.push({ description: "Leave", name: "Quit", value: "quit" });
     return tabs;
 }
-//# sourceMappingURL=opentui-shell-contracts.js.map

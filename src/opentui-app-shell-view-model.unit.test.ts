@@ -55,7 +55,7 @@ const RECORD: WorktreeStackKit_OpenTuiRecordInput = {
   worktreePath: "/workspace/demo",
 };
 
-test("OpenTUI app shell helpers select records and resolve paths", () => {
+void test("OpenTUI app shell helpers select records and resolve paths", () => {
   assert.equal(
     WorktreeStackKit_getOpenTuiSelectedRecord({
       recordPickIndex: 0,
@@ -81,7 +81,7 @@ test("OpenTUI app shell helpers select records and resolve paths", () => {
   );
 });
 
-test("OpenTUI app shell helpers summarize inventory and records", () => {
+void test("OpenTUI app shell helpers summarize inventory and records", () => {
   assert.equal(
     WorktreeStackKit_formatOpenTuiRecordSummary(RECORD),
     "metadata-stack | slot 11 | realm metadata-realm",
@@ -118,7 +118,7 @@ test("OpenTUI app shell helpers summarize inventory and records", () => {
   );
 });
 
-test("OpenTUI app shell helpers build detail and issue models", () => {
+void test("OpenTUI app shell helpers build detail and issue models", () => {
   assert.deepEqual(
     WorktreeStackKit_buildOpenTuiDetailRows({ record: RECORD }),
     [
@@ -161,7 +161,7 @@ test("OpenTUI app shell helpers build detail and issue models", () => {
   );
 });
 
-test("OpenTUI app shell helpers build copy labels and footer controls", () => {
+void test("OpenTUI app shell helpers build copy labels and footer controls", () => {
   assert.equal(
     WorktreeStackKit_formatOpenTuiCopyLabel({
       copyFlash: "detail",
