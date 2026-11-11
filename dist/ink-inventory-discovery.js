@@ -566,4 +566,3 @@ export async function WorktreeStackKit_loadInkInventory(options) {
         globalIssues,
     };
 }
-//# sourceMappingURL=ink-inventory-discovery.js.map

@@ -375,4 +375,3 @@ function WorktreeStackKit_createInkAdminTaskPlan(options) {
 function WorktreeStackKit_hasAdminBlockingIssue(issues) {
     return issues.some((issue) => issue.severity === "error");
 }
-//# sourceMappingURL=ink-admin-task-plans.js.map

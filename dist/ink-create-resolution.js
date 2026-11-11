@@ -229,4 +229,3 @@ export function WorktreeStackKit_resolveCreatedInkRecord(options) {
         status: "not-found",
     };
 }
-//# sourceMappingURL=ink-create-resolution.js.map

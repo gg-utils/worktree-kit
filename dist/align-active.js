@@ -591,4 +591,3 @@ export function WorktreeStackKit_createAlignActive(config) {
         worktreeStackAlignActiveValidateWorktreeAlignment,
     };
 }
-//# sourceMappingURL=align-active.js.map

@@ -58,4 +58,3 @@ export declare function WorktreeStackKit_openTuiFlowTitle(options: {
 export declare function WorktreeStackKit_openTuiNavTabs(options: {
     readonly includeMenuBack: boolean;
 }): WorktreeStackKit_OpenTuiSelectOption[];
-//# sourceMappingURL=opentui-shell-contracts.d.ts.map

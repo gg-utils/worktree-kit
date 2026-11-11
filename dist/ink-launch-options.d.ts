@@ -60,4 +60,3 @@ export declare function WorktreeStackKit_normalizeInkActionId(value: string): Wo
 export declare function WorktreeStackKit_getInkHelpText(): string;
 /** Parses Ink launcher argv into either a help request or a structured launch target. */
 export declare function WorktreeStackKit_parseInkLaunchOptions(argv: readonly string[]): WorktreeStackKit_InkLaunchOptionsParseResult;
-//# sourceMappingURL=ink-launch-options.d.ts.map

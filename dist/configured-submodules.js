@@ -186,4 +186,3 @@ export function WorktreeStackKit_syncConfiguredSubmoduleBranches(options) {
         worktreeStackInfo(`Configured submodule branch ready: ${submodule.path} -> ${submodule.branchName}`);
     }
 }
-//# sourceMappingURL=configured-submodules.js.map

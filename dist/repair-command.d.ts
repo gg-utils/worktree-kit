@@ -126,4 +126,3 @@ export declare function WorktreeStackKit_syncRepairPackageEnvFromCanonical(optio
     canonicalEnvPath: string;
     envFilePath: string;
 }): string[];
-//# sourceMappingURL=repair-command.d.ts.map

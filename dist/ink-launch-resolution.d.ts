@@ -64,4 +64,3 @@ export declare function WorktreeStackKit_createInkLaunchInventory(inventory: Wor
 export declare function WorktreeStackKit_resolveInkLaunchTarget(options: WorktreeStackKit_ResolveInkLaunchTarget_Options): WorktreeStackKit_InkResolvedLaunchTarget;
 /** Binds a launcher catalog and draft factory for script adapters. */
 export declare function WorktreeStackKit_createInkLaunchTargetResolver(options: WorktreeStackKit_CreateInkLaunchTargetResolverOptions): (inventory: WorktreeStackKit_InkUiInventory, target: WorktreeStackKit_InkLaunchTarget | null) => WorktreeStackKit_InkResolvedLaunchTarget;
-//# sourceMappingURL=ink-launch-resolution.d.ts.map

@@ -44,4 +44,3 @@ export type WorktreeStackKit_ResolveInteractivePathContextOptions = WorktreeStac
 export declare function WorktreeStackKit_resolveInteractiveRepoRoot(options: WorktreeStackKit_ResolveInteractiveRepoRootOptions): string;
 /** Builds the reusable interactive path context from project marker/path configuration. */
 export declare function WorktreeStackKit_resolveInteractivePathContext(options: WorktreeStackKit_ResolveInteractivePathContextOptions): WorktreeStackKit_InteractivePathContext;
-//# sourceMappingURL=interactive-paths.d.ts.map

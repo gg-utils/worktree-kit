@@ -131,4 +131,3 @@ export const WORKTREE_STACK_KIT_INK_ACTIONS = [
         scope: "global",
     },
 ];
-//# sourceMappingURL=ink-action-catalog.js.map

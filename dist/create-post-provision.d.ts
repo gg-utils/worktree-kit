@@ -109,4 +109,3 @@ export declare function WorktreeStackKit_startCreateInCurrentTerminal(options: {
     config: WorktreeStackKit_CreatePostProvisionConfig;
     context: WorktreeStackKit_CreatePostProvisionContext;
 }): number | null;
-//# sourceMappingURL=create-post-provision.d.ts.map

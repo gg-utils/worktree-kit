@@ -275,4 +275,3 @@ export function WorktreeStackKit_buildOpenTuiSyncArgv(options) {
     }
     return argv;
 }
-//# sourceMappingURL=ui-command-catalog.js.map

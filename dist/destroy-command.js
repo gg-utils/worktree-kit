@@ -335,4 +335,3 @@ function WorktreeStackKit_pruneDestroyMetadata(state) {
         stdio: "inherit",
     });
 }
-//# sourceMappingURL=destroy-command.js.map

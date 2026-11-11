@@ -30,7 +30,7 @@ import {
   WorktreeStackKit_updateOpenTuiSwitchFormModel,
 } from "./opentui-action-scroll-switch-plans.js";
 
-test("OpenTUI switch visibility helpers match switch flow phases", () => {
+void test("OpenTUI switch visibility helpers match switch flow phases", () => {
   assert.equal(
     WorktreeStackKit_shouldShowOpenTuiSwitchForm({ flow: "switch", phase: "form" }),
     true,
@@ -49,7 +49,7 @@ test("OpenTUI switch visibility helpers match switch flow phases", () => {
   );
 });
 
-test("OpenTUI switch option builders expose stable form and preview tabs", () => {
+void test("OpenTUI switch option builders expose stable form and preview tabs", () => {
   assert.deepEqual(WorktreeStackKit_buildOpenTuiSwitchFormOptions(), [
     { description: "Preview command", name: "Continue", value: "next" },
     { description: "Return to menu", name: "Menu", value: "menu" },
@@ -61,7 +61,7 @@ test("OpenTUI switch option builders expose stable form and preview tabs", () =>
   ]);
 });
 
-test("OpenTUI switch model updates and preview planning stay package-owned", () => {
+void test("OpenTUI switch model updates and preview planning stay package-owned", () => {
   const initial = { prefix: "", stackName: "demo", worktreesBase: "default" };
   const withPrefix = WorktreeStackKit_updateOpenTuiSwitchFormModel({
     fieldId: "prefix",
@@ -88,7 +88,7 @@ test("OpenTUI switch model updates and preview planning stay package-owned", () 
   );
 });
 
-test("OpenTUI switch selection planners map values to state transitions", () => {
+void test("OpenTUI switch selection planners map values to state transitions", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiSwitchFormSelection({ optionValue: "next" }),
     { type: "preview" },

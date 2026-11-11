@@ -88,4 +88,3 @@ export declare function WorktreeStackKit_initializeCreateSubmodules(options: {
     config: WorktreeStackKit_CreateRealmAndGitConfig;
     context: WorktreeStackKit_CreateRealmAndGitContext;
 }): void;
-//# sourceMappingURL=create-realm-and-git.d.ts.map

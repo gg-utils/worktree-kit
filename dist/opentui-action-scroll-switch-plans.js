@@ -97,4 +97,3 @@ export function WorktreeStackKit_planOpenTuiSwitchPreviewSelection(options) {
             return { type: "ignore" };
     }
 }
-//# sourceMappingURL=opentui-action-scroll-switch-plans.js.map

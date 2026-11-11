@@ -108,4 +108,3 @@ export declare function WorktreeStackKit_OpenTuiActionScrollNpmPreviewPanel(prop
 /** Token confirmation gate immediately before a guarded npm run. */
 export declare function WorktreeStackKit_OpenTuiActionScrollNpmConfirmPanel(props: WorktreeStackKit_OpenTuiActionScrollNpmConfirmPanelProps): import("react").ReactNode;
 export {};
-//# sourceMappingURL=opentui-npm-panels.d.ts.map

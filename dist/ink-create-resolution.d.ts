@@ -101,4 +101,3 @@ export declare function WorktreeStackKit_resolveCreatedInkRecord(options: {
     readonly createContext: WorktreeStackKit_InkUiCreateRequestContext;
     readonly inventory: WorktreeStackKit_InkUiInventory;
 }): WorktreeStackKit_InkCreateResolution;
-//# sourceMappingURL=ink-create-resolution.d.ts.map

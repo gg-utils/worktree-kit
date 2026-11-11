@@ -119,4 +119,3 @@ function WorktreeStackKit_formatOpenTuiRecordStatusForClipboard(options) {
     }
     return "";
 }
-//# sourceMappingURL=opentui-shell-serializers.js.map

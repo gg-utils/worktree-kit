@@ -44,4 +44,3 @@ export interface WorktreeStackKit_InkAppProps {
 }
 /** Renders the reusable worktree Ink app around project-injected plans and inventory loading. */
 export declare function WorktreeStackKit_InkApp({ actionDefinitions: actionDefinitionsProp, buildActionPlan, createResolutionConfig, launchTarget, loadInventory, projectRoot, }: WorktreeStackKit_InkAppProps): React.ReactNode;
-//# sourceMappingURL=ink-app.d.ts.map

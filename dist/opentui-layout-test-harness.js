@@ -23,4 +23,3 @@ export async function WorktreeStackKit_runOpenTuiLayoutTestHarness(options) {
     const { createRoot } = await import("@opentui/react");
     createRoot(renderer).render(_jsx(WorktreeStackKit_OpenTuiLayoutTestHarnessApp, { showWorktreesHeading: options.showWorktreesHeading }));
 }
-//# sourceMappingURL=opentui-layout-test-harness.js.map

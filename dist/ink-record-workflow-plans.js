@@ -399,4 +399,3 @@ function WorktreeStackKit_addRegularWorktreeIssues(options) {
 function WorktreeStackKit_hasBlockingIssue(issues) {
     return issues.some((issue) => issue.severity === "error");
 }
-//# sourceMappingURL=ink-record-workflow-plans.js.map

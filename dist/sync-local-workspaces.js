@@ -177,4 +177,3 @@ export function WorktreeStackKit_runSyncLocalWorkspacesCommand(options) {
         });
     }
 }
-//# sourceMappingURL=sync-local-workspaces.js.map

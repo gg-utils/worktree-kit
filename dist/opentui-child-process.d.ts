@@ -57,4 +57,3 @@ export declare function WorktreeStackKit_startOpenTuiChildProcess(options: Workt
 export declare function WorktreeStackKit_spawnOpenTuiNpmRun(options: WorktreeStackKit_SpawnOpenTuiNpmRunOptions): WorktreeStackKit_OpenTuiCancelableRun;
 /** Runs `npx tsx <scriptUnderRepo> <args>` from a project root. */
 export declare function WorktreeStackKit_spawnOpenTuiNpxTsx(options: WorktreeStackKit_SpawnOpenTuiNpxTsxOptions): Promise<WorktreeStackKit_OpenTuiRunResult>;
-//# sourceMappingURL=opentui-child-process.d.ts.map

@@ -135,4 +135,3 @@ export declare function WorktreeStackKit_buildOpenTuiSyncArgv(options: {
     sourceWorkspace: string;
     worktreeLines: string;
 }): string[];
-//# sourceMappingURL=ui-command-catalog.d.ts.map

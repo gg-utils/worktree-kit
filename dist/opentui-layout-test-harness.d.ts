@@ -31,4 +31,3 @@ export declare function WorktreeStackKit_OpenTuiLayoutTestHarnessApp(props: Work
 /** Boots the layout smoke harness using a host-owned OpenTUI renderer factory. */
 export declare function WorktreeStackKit_runOpenTuiLayoutTestHarness(options: WorktreeStackKit_OpenTuiLayoutTestHarnessOptions): Promise<void>;
 export {};
-//# sourceMappingURL=opentui-layout-test-harness.d.ts.map

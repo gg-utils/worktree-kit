@@ -83,4 +83,3 @@ function WorktreeStackKit_handleCreatePreviewSelection(options) {
     }
     options.props.setPhase(selectionPlan.nextPhase);
 }
-//# sourceMappingURL=opentui-create-wizard-panels.js.map

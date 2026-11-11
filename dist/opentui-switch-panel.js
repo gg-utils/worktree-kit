@@ -80,4 +80,3 @@ function WorktreeStackKit_handleSwitchPreviewSelection(options) {
     }
     options.props.setPhase(selectionPlan.nextPhase);
 }
-//# sourceMappingURL=opentui-switch-panel.js.map

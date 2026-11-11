@@ -54,4 +54,3 @@ export declare function WorktreeStackKit_OpenTuiIssuesPanel(props: {
 export declare function WorktreeStackKit_OpenTuiShellFooter(props: {
     readonly flow: WorktreeStackKit_OpenTuiFlow;
 }): import("react").ReactNode;
-//# sourceMappingURL=opentui-app-shell-panels.d.ts.map

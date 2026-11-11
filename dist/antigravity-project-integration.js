@@ -204,4 +204,3 @@ export function WorktreeStackKit_runAntigravityProjectCli(argv, env = process.en
         return 1;
     }
 }
-//# sourceMappingURL=antigravity-project-integration.js.map

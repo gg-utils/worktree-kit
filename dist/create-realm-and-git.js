@@ -236,4 +236,3 @@ export function WorktreeStackKit_initializeCreateSubmodules(options) {
     }
     console.log("[warn] Continuing with existing submodule directories (gitlink mismatch likely).");
 }
-//# sourceMappingURL=create-realm-and-git.js.map

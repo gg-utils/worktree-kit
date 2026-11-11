@@ -165,4 +165,3 @@ export declare function WorktreeStackKit_getOpenTuiCopyTone(options: {
 export declare function WorktreeStackKit_buildOpenTuiFooterControls(options: {
     readonly flow: WorktreeStackKit_OpenTuiFlow;
 }): WorktreeStackKit_OpenTuiFooterControl[];
-//# sourceMappingURL=opentui-app-shell-view-model.d.ts.map

@@ -85,4 +85,3 @@ export declare function WorktreeStackKit_planOpenTuiSwitchFormSelection(options:
 export declare function WorktreeStackKit_planOpenTuiSwitchPreviewSelection(options: {
     readonly optionValue: string | undefined;
 }): WorktreeStackKit_OpenTuiSwitchPreviewSelectionPlan;
-//# sourceMappingURL=opentui-action-scroll-switch-plans.d.ts.map

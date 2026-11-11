@@ -114,4 +114,3 @@ export type WorktreeStackKit_AlignActive = {
     worktreeStackAlignActiveValidateWorktreeAlignment: (targetBranch: string, worktreePath: string) => void;
 };
 export declare function WorktreeStackKit_createAlignActive(config: WorktreeStackKit_AlignActiveConfig): WorktreeStackKit_AlignActive;
-//# sourceMappingURL=align-active.d.ts.map

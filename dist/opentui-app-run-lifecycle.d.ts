@@ -51,4 +51,3 @@ export declare function WorktreeStackKit_runOpenTuiCommandWithLifecycle(options:
     readonly commandLabel: string;
     readonly startRun: (handlers: WorktreeStackKit_OpenTuiRunOutputHandlers) => WorktreeStackKit_OpenTuiRunStartResult;
 }): Promise<void>;
-//# sourceMappingURL=opentui-app-run-lifecycle.d.ts.map

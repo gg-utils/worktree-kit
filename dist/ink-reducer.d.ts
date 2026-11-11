@@ -19,4 +19,3 @@ import type { WorktreeStackKit_InkUiAction, WorktreeStackKit_InkUiState } from "
 export declare function WorktreeStackKit_createInitialInkState(): WorktreeStackKit_InkUiState;
 /** Pure reducer translating bridge/user events into the next Ink session snapshot. */
 export declare function WorktreeStackKit_inkReducer(state: WorktreeStackKit_InkUiState, action: WorktreeStackKit_InkUiAction): WorktreeStackKit_InkUiState;
-//# sourceMappingURL=ink-reducer.d.ts.map

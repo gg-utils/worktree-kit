@@ -46,4 +46,3 @@ export declare function WorktreeStackKit_focusOpenTuiTabsForMenuColumn(options: 
 }): void;
 /** Escape-to-menu plus left/right/tab column rotation for the three-column discovery menu. */
 export declare function WorktreeStackKit_applyOpenTuiMenuColumnKeyboardNavigation(options: WorktreeStackKit_OpenTuiMenuKeyboardNavigationOptions): void;
-//# sourceMappingURL=opentui-shell-keyboard.d.ts.map

@@ -86,4 +86,3 @@ export declare function WorktreeStackKit_startInkRuntimeProcess(options: {
     readonly cancel: () => void;
     readonly promise: Promise<WorktreeStackKit_InkTaskExecutionResult>;
 };
-//# sourceMappingURL=ink-bridge.d.ts.map

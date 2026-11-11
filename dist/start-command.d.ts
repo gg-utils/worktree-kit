@@ -103,4 +103,3 @@ export type WorktreeStackKit_StartCommand = {
 /** Renders start CLI usage from project-supplied command lines and editor label. */
 export declare function WorktreeStackKit_renderStartUsage(config: WorktreeStackKit_StartCommandConfig): string;
 export declare function WorktreeStackKit_createStartCommand(config: WorktreeStackKit_StartCommandConfig): WorktreeStackKit_StartCommand;
-//# sourceMappingURL=start-command.d.ts.map

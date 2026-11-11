@@ -96,4 +96,3 @@ export declare function WorktreeStackKit_createInkGlobalPlan(options: {
     readonly config: WorktreeStackKit_InkAdminTaskPlanConfig;
     readonly inventory: WorktreeStackKit_InkUiInventory;
 }): WorktreeStackKit_InkUiActionRequestPlan;
-//# sourceMappingURL=ink-admin-task-plans.d.ts.map

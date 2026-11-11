@@ -28,7 +28,7 @@ import test from "node:test";
 
 import { WorktreeStackKit_deriveSlotPortMap } from "./slot-ports.js";
 
-test("WorktreeStackKit_deriveSlotPortMap applies slot offsets to explicit bases", () => {
+void test("WorktreeStackKit_deriveSlotPortMap applies slot offsets to explicit bases", () => {
   const ports = WorktreeStackKit_deriveSlotPortMap({
     portDefinitions: [
       { basePort: 3000, key: "web" },
@@ -41,7 +41,7 @@ test("WorktreeStackKit_deriveSlotPortMap applies slot offsets to explicit bases"
   assert.equal(ports.get("api"), 8005);
 });
 
-test("WorktreeStackKit_deriveSlotPortMap rejects non-positive slots", () => {
+void test("WorktreeStackKit_deriveSlotPortMap rejects non-positive slots", () => {
   assert.throws(() =>
     WorktreeStackKit_deriveSlotPortMap({
       portDefinitions: [{ basePort: 3000, key: "web" }],

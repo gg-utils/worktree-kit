@@ -60,4 +60,3 @@ function WorktreeStackKit_handleOpenTuiEmptyWorktreePickSelection(options) {
     options.props.setRecordPickIndex(selectionPlan.recordPickIndex);
     options.props.setPhase(selectionPlan.nextPhase);
 }
-//# sourceMappingURL=opentui-worktree-pick-panel.js.map

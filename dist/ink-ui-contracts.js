@@ -21,4 +21,3 @@
  * @documentation reviewed=2026-05-23 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
  */
 export {};
-//# sourceMappingURL=ink-ui-contracts.js.map

@@ -30,4 +30,3 @@ export type WorktreeStackKit_InkActionDefinition = {
 };
 /** Ordered worktree action catalog for Ink-style UIs. */
 export declare const WORKTREE_STACK_KIT_INK_ACTIONS: readonly WorktreeStackKit_InkActionDefinition[];
-//# sourceMappingURL=ink-action-catalog.d.ts.map

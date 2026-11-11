@@ -65,7 +65,7 @@ function createConfig(options: {
   };
 }
 
-test("WorktreeStackKit_renderSyncLocalWorkspacesUsage uses configured lines", () => {
+void test("WorktreeStackKit_renderSyncLocalWorkspacesUsage uses configured lines", () => {
   const usage = WorktreeStackKit_renderSyncLocalWorkspacesUsage(createUsage());
 
   assert.match(usage, /package-manager run sync-local/u);
@@ -73,7 +73,7 @@ test("WorktreeStackKit_renderSyncLocalWorkspacesUsage uses configured lines", ()
   assert.match(usage, /project-supplied post-sync hook/u);
 });
 
-test("WorktreeStackKit_parseSyncLocalWorkspacesArgs supports repeatable targets", () => {
+void test("WorktreeStackKit_parseSyncLocalWorkspacesArgs supports repeatable targets", () => {
   assert.deepEqual(
     WorktreeStackKit_parseSyncLocalWorkspacesArgs({
       argv: [
@@ -94,7 +94,7 @@ test("WorktreeStackKit_parseSyncLocalWorkspacesArgs supports repeatable targets"
   );
 });
 
-test("WorktreeStackKit_resolveSyncLocalWorkspaceTargets discovers git-marked siblings", () => {
+void test("WorktreeStackKit_resolveSyncLocalWorkspaceTargets discovers git-marked siblings", () => {
   const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), "worktree-kit-targets-"));
   try {
     const canonicalRootWorkspacePath = path.join(temporaryRoot, "root");
@@ -117,7 +117,7 @@ test("WorktreeStackKit_resolveSyncLocalWorkspaceTargets discovers git-marked sib
   }
 });
 
-test("WorktreeStackKit_runSyncLocalWorkspacesCommand syncs explicit targets", () => {
+void test("WorktreeStackKit_runSyncLocalWorkspacesCommand syncs explicit targets", () => {
   const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), "worktree-kit-sync-runner-"));
   const afterSyncTargets: string[] = [];
   try {

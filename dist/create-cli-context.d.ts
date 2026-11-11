@@ -74,4 +74,3 @@ export declare function WorktreeStackKit_buildCreateBaseContext(options: {
 }): WorktreeStackKit_CreateBaseContext;
 /** Emits key-value debug lines for fields common to every create context. */
 export declare function WorktreeStackKit_printCreateBaseDebugContext(context: WorktreeStackKit_CreateBaseDebugContext): void;
-//# sourceMappingURL=create-cli-context.d.ts.map

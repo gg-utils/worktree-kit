@@ -357,4 +357,3 @@ export function WorktreeStackKit_createAlignActiveCommand(config) {
         runAlignActiveCli,
     };
 }
-//# sourceMappingURL=align-active-command.js.map

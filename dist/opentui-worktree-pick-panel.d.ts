@@ -33,4 +33,3 @@ export interface WorktreeStackKit_OpenTuiActionScrollWorktreePickPanelProps {
 }
 /** Worktree pick list and manual path capture shared by record-scoped flows. */
 export declare function WorktreeStackKit_OpenTuiActionScrollWorktreePickPanel(props: WorktreeStackKit_OpenTuiActionScrollWorktreePickPanelProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-worktree-pick-panel.d.ts.map

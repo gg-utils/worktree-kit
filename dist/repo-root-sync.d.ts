@@ -39,4 +39,3 @@ export declare function WorktreeStackKit_syncRequiredSubmoduleBranches(options: 
 export declare function WorktreeStackKit_syncRepoRootTargetCheckout(options: WorktreeStackKit_SyncRepoRootTargetCheckout_Options): void;
 /** Wraps repo-root target checkout sync with root-main and per-repo mutation locks. */
 export declare function WorktreeStackKit_syncRepoRootTargetCheckoutWithLocks(options: WorktreeStackKit_SyncRepoRootTargetCheckoutWithLocks_Options): Promise<void>;
-//# sourceMappingURL=repo-root-sync.d.ts.map

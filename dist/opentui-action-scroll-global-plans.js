@@ -157,4 +157,3 @@ export function WorktreeStackKit_planOpenTuiRunResultSelection(options) {
     }
     return { type: "ignore" };
 }
-//# sourceMappingURL=opentui-action-scroll-global-plans.js.map

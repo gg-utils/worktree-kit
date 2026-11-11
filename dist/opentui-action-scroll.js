@@ -18,4 +18,3 @@ function WorktreeStackKit_buildOpenTuiActionScrollRecordOptions(props) {
         name: props.recordSummary(record),
     })) ?? null);
 }
-//# sourceMappingURL=opentui-action-scroll.js.map

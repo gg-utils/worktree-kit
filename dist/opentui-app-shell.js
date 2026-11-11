@@ -113,4 +113,3 @@ function WorktreeStackKit_buildOpenTuiDetailTitle(options) {
     }
     return options.focusedColumn === "detail" ? "▸ Detail" : "Detail";
 }
-//# sourceMappingURL=opentui-app-shell.js.map

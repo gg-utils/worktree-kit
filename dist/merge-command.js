@@ -1128,4 +1128,3 @@ export function WorktreeStackKit_createMergeCommand(config) {
         runMergeCli,
     };
 }
-//# sourceMappingURL=merge-command.js.map

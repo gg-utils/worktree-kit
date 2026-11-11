@@ -127,7 +127,7 @@ const BLOCKED_PLAN: WorktreeStackKit_InkUiActionRequestPlan = {
   targetPath: "/repo/worktrees/demo",
 };
 
-test("Ink full-screen create model resolves draft previews and create navigation rows", () => {
+void test("Ink full-screen create model resolves draft previews and create navigation rows", () => {
   const model = WorktreeStackKit_buildInkFullscreenCreateEditorModel({
     actionPlan: CREATE_PLAN,
     createDraft: CREATE_DRAFT,
@@ -172,7 +172,7 @@ test("Ink full-screen create model resolves draft previews and create navigation
   );
 });
 
-test("Ink full-screen action and review models render command state and confirmations", () => {
+void test("Ink full-screen action and review models render command state and confirmations", () => {
   const actionModel = WorktreeStackKit_buildInkFullscreenActionEditorModel({
     actionDefinition: START_ACTION,
     actionPlan: BLOCKED_PLAN,
@@ -195,7 +195,7 @@ test("Ink full-screen action and review models render command state and confirma
   );
 });
 
-test("Ink full-screen session and result models expose output and handoff diagnostics", () => {
+void test("Ink full-screen session and result models expose output and handoff diagnostics", () => {
   const sessionModel = WorktreeStackKit_buildInkFullscreenSessionModel({
     actionPlan: CREATE_PLAN,
     lines: [{ source: "stdout", text: "creating" }],

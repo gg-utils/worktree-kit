@@ -70,4 +70,3 @@ export declare function WorktreeStackKit_resolveInkKittyKeyboardMode(env: NodeJS
 export declare function WorktreeStackKit_resolveInkStdoutForRender({ measureTerminalSize, stdout, }: WorktreeStackKit_ResolveInkStdoutForRenderOptions): NodeJS.WriteStream;
 /** Runs the worktree Ink entrypoint and returns the process exit code to expose. */
 export declare function WorktreeStackKit_runInkEntrypoint({ appComponent, argv, cwd, env, measureTerminalSize, stderr, stdin, stdout, }: WorktreeStackKit_RunInkEntrypointOptions): Promise<number>;
-//# sourceMappingURL=ink-entrypoint.d.ts.map

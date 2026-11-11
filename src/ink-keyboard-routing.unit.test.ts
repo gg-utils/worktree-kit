@@ -45,7 +45,7 @@ function createActionCollector(): {
   };
 }
 
-test("quit routing cancels an active session before exiting", () => {
+void test("quit routing cancels an active session before exiting", () => {
   const collector = createActionCollector();
   let cancelCount = 0;
   let exitCount = 0;
@@ -77,7 +77,7 @@ test("quit routing cancels an active session before exiting", () => {
   ]);
 });
 
-test("shell navigation dispatches list and action-column movement", () => {
+void test("shell navigation dispatches list and action-column movement", () => {
   const collector = createActionCollector();
 
   assert.equal(
@@ -109,7 +109,7 @@ test("shell navigation dispatches list and action-column movement", () => {
   ]);
 });
 
-test("editor routing handles create text edits and boolean toggles", () => {
+void test("editor routing handles create text edits and boolean toggles", () => {
   const collector = createActionCollector();
   const textField = WorktreeStackKit_createInitialInkCreateDraft().stackName;
 
@@ -168,7 +168,7 @@ test("editor routing handles create text edits and boolean toggles", () => {
   ]);
 });
 
-test("review routing sanitizes destructive confirmation and starts after exact token", () => {
+void test("review routing sanitizes destructive confirmation and starts after exact token", () => {
   const collector = createActionCollector();
   const activePlan: DemoPlan = {
     request: { command: "npm" },
@@ -202,7 +202,7 @@ test("review routing sanitizes destructive confirmation and starts after exact t
   ]);
 });
 
-test("result routing starts follow-up plans and action id guard follows the catalog", () => {
+void test("result routing starts follow-up plans and action id guard follows the catalog", () => {
   const collector = createActionCollector();
   const followUpPlan: DemoPlan = {
     request: { command: "npm" },

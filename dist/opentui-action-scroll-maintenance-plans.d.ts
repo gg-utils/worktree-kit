@@ -114,4 +114,3 @@ export declare function WorktreeStackKit_formatOpenTuiBootstrapPreviewText(optio
     readonly seedFacts: WorktreeStackKit_OpenTuiBootstrapSeedFacts;
     readonly tsxInstallCommand: string;
 }): string;
-//# sourceMappingURL=opentui-action-scroll-maintenance-plans.d.ts.map

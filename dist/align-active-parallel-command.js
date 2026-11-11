@@ -729,4 +729,3 @@ export function WorktreeStackKit_createAlignActiveParallelCommand(config) {
         runAlignActiveParallelCli,
     };
 }
-//# sourceMappingURL=align-active-parallel-command.js.map

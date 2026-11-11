@@ -201,4 +201,3 @@ export declare function WorktreeStackKit_buildInkShellLegendLines(options: {
     readonly focusedColumn: WorktreeStackKit_InkShellFocusedColumn;
     readonly selectedActionId: WorktreeStackKit_InkActionId | null;
 }): string[];
-//# sourceMappingURL=ink-shell-view-model.d.ts.map

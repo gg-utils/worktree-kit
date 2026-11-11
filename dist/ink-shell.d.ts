@@ -58,4 +58,3 @@ export declare function WorktreeStackKit_InkShell({ inventory, selectedIndex, se
  * Creates a shell component with project action definitions and create-resolution config bound.
  */
 export declare function WorktreeStackKit_createBoundInkShell({ actionDefinitions, resolutionConfig, }: WorktreeStackKit_CreateBoundInkShellOptions): WorktreeStackKit_BoundInkShellComponent;
-//# sourceMappingURL=ink-shell.d.ts.map

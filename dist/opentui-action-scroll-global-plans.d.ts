@@ -112,4 +112,3 @@ export declare function WorktreeStackKit_formatOpenTuiRunResultText(options: {
 export declare function WorktreeStackKit_planOpenTuiRunResultSelection(options: {
     readonly optionValue: string | undefined;
 }): WorktreeStackKit_OpenTuiRunResultSelectionPlan;
-//# sourceMappingURL=opentui-action-scroll-global-plans.d.ts.map

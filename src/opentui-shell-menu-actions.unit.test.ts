@@ -25,7 +25,7 @@ import {
   WorktreeStackKit_planOpenTuiMenuActionSelection,
 } from "./opentui-shell-menu-actions.js";
 
-test("OpenTUI menu action builder disables rows from availability facts", () => {
+void test("OpenTUI menu action builder disables rows from availability facts", () => {
   const options = WorktreeStackKit_buildOpenTuiMenuOptions({
     availability: {
       hasRealms: false,
@@ -45,7 +45,7 @@ test("OpenTUI menu action builder disables rows from availability facts", () => 
   );
 });
 
-test("OpenTUI menu action planner guards disabled and unknown options", () => {
+void test("OpenTUI menu action planner guards disabled and unknown options", () => {
   const availability = {
     hasRealms: false,
     hasRecords: false,
@@ -68,7 +68,7 @@ test("OpenTUI menu action planner guards disabled and unknown options", () => {
   );
 });
 
-test("OpenTUI menu action planner maps flows to phases", () => {
+void test("OpenTUI menu action planner maps flows to phases", () => {
   const availability = {
     hasRealms: true,
     hasRecords: true,

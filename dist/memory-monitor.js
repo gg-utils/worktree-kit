@@ -896,4 +896,3 @@ export async function WorktreeStackKit_runMemoryMonitorCommand(commandOptions) {
     }
     return 0;
 }
-//# sourceMappingURL=memory-monitor.js.map

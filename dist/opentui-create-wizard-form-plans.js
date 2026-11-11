@@ -278,4 +278,3 @@ function WorktreeStackKit_applyOpenTuiCreateStartModeSelect(options) {
     }
     return options.model;
 }
-//# sourceMappingURL=opentui-create-wizard-form-plans.js.map

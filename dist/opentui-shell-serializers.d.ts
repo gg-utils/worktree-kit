@@ -34,4 +34,3 @@ export declare function WorktreeStackKit_serializeOpenTuiIssues(options: {
     readonly label: string;
     readonly recordIssues: readonly WorktreeStackKit_OpenTuiIssueInput[];
 }): string;
-//# sourceMappingURL=opentui-shell-serializers.d.ts.map

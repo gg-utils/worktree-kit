@@ -100,4 +100,3 @@ export function WorktreeStackKit_InkActionOptionsPanel({ actionDefinition, actio
     }
     return (_jsxs(Box, { flexDirection: "column", marginTop: 1, children: [_jsx(Text, { bold: true, children: "Options" }), _jsx(Text, { color: "gray", children: "No additional options" })] }));
 }
-//# sourceMappingURL=ink-action-options-panel.js.map

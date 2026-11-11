@@ -26,7 +26,7 @@ import test from "node:test";
 
 import { WORKTREE_STACK_KIT_INK_ACTIONS } from "./ink-action-catalog.js";
 
-test("WORKTREE_STACK_KIT_INK_ACTIONS keeps record actions before global actions", () => {
+void test("WORKTREE_STACK_KIT_INK_ACTIONS keeps record actions before global actions", () => {
   assert.deepEqual(
     WORKTREE_STACK_KIT_INK_ACTIONS.slice(0, 4).map((action) => [
       action.id,
@@ -41,7 +41,7 @@ test("WORKTREE_STACK_KIT_INK_ACTIONS keeps record actions before global actions"
   );
 });
 
-test("WORKTREE_STACK_KIT_INK_ACTIONS includes launchable global maintenance actions", () => {
+void test("WORKTREE_STACK_KIT_INK_ACTIONS includes launchable global maintenance actions", () => {
   const actionIds = new Set(
     WORKTREE_STACK_KIT_INK_ACTIONS.map((action) => action.id),
   );

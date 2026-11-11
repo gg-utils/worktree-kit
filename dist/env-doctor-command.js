@@ -471,4 +471,3 @@ function WorktreeStackKit_envDoctorReadStringMap(value) {
     }
     return result;
 }
-//# sourceMappingURL=env-doctor-command.js.map

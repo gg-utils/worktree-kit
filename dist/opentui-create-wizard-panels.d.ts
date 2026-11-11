@@ -58,4 +58,3 @@ export interface WorktreeStackKit_OpenTuiCreateWizardPreviewProps {
 export declare function WorktreeStackKit_OpenTuiCreateWizardForm(props: WorktreeStackKit_OpenTuiCreateWizardFormProps): import("react").ReactNode;
 /** Renders the create command preview plus run/back navigation. */
 export declare function WorktreeStackKit_OpenTuiCreateWizardPreview(props: WorktreeStackKit_OpenTuiCreateWizardPreviewProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-create-wizard-panels.d.ts.map

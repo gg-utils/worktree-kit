@@ -44,4 +44,3 @@ export declare function WorktreeStackKit_planOpenTuiMenuActionSelection(options:
     readonly availability: WorktreeStackKit_OpenTuiMenuAvailability;
     readonly optionValue: string | undefined;
 }): WorktreeStackKit_OpenTuiMenuSelectionPlan;
-//# sourceMappingURL=opentui-shell-menu-actions.d.ts.map

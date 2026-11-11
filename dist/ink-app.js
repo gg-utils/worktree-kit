@@ -16,7 +16,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
  * @see packages/worktree-kit/src/index.ts - Package barrel that re-exports this module so project adapters can import `@gg-utils/worktree-kit/ink-app` without reaching into `src/` paths.
  * @documentation reviewed=2026-05-23 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
  */
-import { startTransition, useEffect, useReducer, useRef } from "react";
+import React, { startTransition, useEffect, useReducer, useRef } from "react";
 import { Box, Text, useApp, useInput } from "ink";
 import { WORKTREE_STACK_KIT_INK_ACTIONS, } from "./ink-action-catalog.js";
 import { WorktreeStackKit_startInkRuntimeProcess, WorktreeStackKit_startInkTaskProcess, } from "./ink-bridge.js";
@@ -372,4 +372,3 @@ export function WorktreeStackKit_InkApp({ actionDefinitions: actionDefinitionsPr
     }
     return (_jsx(WorktreeStackKit_InkShell, { actionDefinitions: actionDefinitions, actionOptions: state.actionOptions, actionPlans: actionPlans, createDraft: state.createDraft, createInteractionMode: state.createInteractionMode, createRegion: state.createRegion, focusedColumn: state.focusedColumn, inventory: inventory, noticeMessage: state.noticeMessage ?? null, poolNextStackEditMode: state.poolNextStackEditMode, resolutionConfig: createResolutionConfig, selectedActionIndex: state.selectedActionIndex, selectedCreateFieldIndex: state.selectedCreateFieldIndex, selectedCreateSectionIndex: state.selectedCreateSectionIndex, selectedIndex: state.selectedIndex }));
 }
-//# sourceMappingURL=ink-app.js.map

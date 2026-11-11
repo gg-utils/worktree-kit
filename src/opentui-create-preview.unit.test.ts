@@ -30,7 +30,7 @@ const TEST_ENV_SUMMARIES = {
   explicitPath: "explicit env summary",
 };
 
-test("OpenTUI create realm-pool resolver shells through configured command facts", () => {
+void test("OpenTUI create realm-pool resolver shells through configured command facts", () => {
   let capturedCommand:
     | {
         readonly args: readonly string[];
@@ -95,7 +95,7 @@ test("OpenTUI create realm-pool resolver shells through configured command facts
   });
 });
 
-test("OpenTUI create realm-pool resolver returns command failures", () => {
+void test("OpenTUI create realm-pool resolver returns command failures", () => {
   const resolveRealmAssignment =
     WorktreeStackKit_createOpenTuiRealmPoolAssignmentResolver({
       getBaseEnv: () => ({}),
@@ -121,7 +121,7 @@ test("OpenTUI create realm-pool resolver returns command failures", () => {
   );
 });
 
-test("OpenTUI create preview uses explicit paths without resolving a realm", () => {
+void test("OpenTUI create preview uses explicit paths without resolving a realm", () => {
   let realmResolutionCount = 0;
   const result = WorktreeStackKit_previewOpenTuiCreate({
     deriveSlotPorts: (slot) => ({ api: 8000 + slot, ui: 3000 + slot }),
@@ -150,7 +150,7 @@ test("OpenTUI create preview uses explicit paths without resolving a realm", () 
   }
 });
 
-test("OpenTUI create preview resolves default folder and realm assignment", () => {
+void test("OpenTUI create preview resolves default folder and realm assignment", () => {
   const result = WorktreeStackKit_previewOpenTuiCreate({
     dateToken: "260521",
     deriveSlotPorts: (slot) => ({ api: 8000 + slot }),
@@ -180,7 +180,7 @@ test("OpenTUI create preview resolves default folder and realm assignment", () =
   }
 });
 
-test("OpenTUI create previewer binds configured defaults for adapters", () => {
+void test("OpenTUI create previewer binds configured defaults for adapters", () => {
   const previewer = WorktreeStackKit_createOpenTuiCreatePreviewer({
     deriveSlotPorts: (slot) => ({ api: 8000 + slot }),
     envSummaryMessages: TEST_ENV_SUMMARIES,
@@ -217,7 +217,7 @@ test("OpenTUI create previewer binds configured defaults for adapters", () => {
   );
 });
 
-test("OpenTUI create preview formatter uses configured port labels", () => {
+void test("OpenTUI create preview formatter uses configured port labels", () => {
   assert.equal(
     WorktreeStackKit_formatOpenTuiCreatePreviewText({
       commandPreview: "npx tsx create.ts --name demo",
@@ -249,7 +249,7 @@ test("OpenTUI create preview formatter uses configured port labels", () => {
   );
 });
 
-test("OpenTUI create preview returns port derivation errors", () => {
+void test("OpenTUI create preview returns port derivation errors", () => {
   const result = WorktreeStackKit_previewOpenTuiCreate({
     deriveSlotPorts: () => {
       throw new Error("bad slot");
@@ -269,7 +269,7 @@ test("OpenTUI create preview returns port derivation errors", () => {
   assert.deepEqual(result, { errorMessage: "bad slot", ok: false });
 });
 
-test("OpenTUI create realm assignment parser validates JSON shape", () => {
+void test("OpenTUI create realm assignment parser validates JSON shape", () => {
   assert.deepEqual(
     WorktreeStackKit_parseOpenTuiCreateRealmAssignmentJson(
       '{"realmSlug":"demo","realmAssignmentSource":"pool"}',

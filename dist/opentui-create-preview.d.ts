@@ -132,4 +132,3 @@ export declare function WorktreeStackKit_formatOpenTuiCreatePreviewText<TPorts e
     readonly portSummaryItems: readonly WorktreeStackKit_OpenTuiCreatePreviewPortSummaryItem<TPorts>[];
     readonly preview: WorktreeStackKit_OpenTuiCreatePreviewOk<TPorts>;
 }): string;
-//# sourceMappingURL=opentui-create-preview.d.ts.map

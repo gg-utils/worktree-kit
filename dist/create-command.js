@@ -70,4 +70,3 @@ export function WorktreeStackKit_runCreateCommand(options) {
         operations.exitProcess(1);
     }
 }
-//# sourceMappingURL=create-command.js.map

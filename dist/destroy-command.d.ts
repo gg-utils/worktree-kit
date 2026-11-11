@@ -76,4 +76,3 @@ export declare function WorktreeStackKit_runDestroy(options: {
 }): number;
 /** CLI entrypoint wiring argv parsing to destroy execution. */
 export declare function WorktreeStackKit_runDestroyCli(options: WorktreeStackKit_RunDestroyCli_Options): number;
-//# sourceMappingURL=destroy-command.d.ts.map

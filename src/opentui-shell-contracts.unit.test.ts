@@ -24,7 +24,7 @@ import {
   WorktreeStackKit_openTuiNavTabs,
 } from "./opentui-shell-contracts.js";
 
-test("OpenTUI shell contract exposes stable preview/result tabs", () => {
+void test("OpenTUI shell contract exposes stable preview/result tabs", () => {
   assert.deepEqual(WORKTREE_STACK_KIT_OPENTUI_PREVIEW_TABS, [
     { description: "Execute", name: "Run", value: "run" },
     { description: "Edit inputs", name: "Back", value: "back" },
@@ -34,7 +34,7 @@ test("OpenTUI shell contract exposes stable preview/result tabs", () => {
   ]);
 });
 
-test("OpenTUI shell contract formats breadcrumbs and navigation tabs", () => {
+void test("OpenTUI shell contract formats breadcrumbs and navigation tabs", () => {
   assert.equal(
     WorktreeStackKit_openTuiFlowTitle({
       flow: "updateFromMain",

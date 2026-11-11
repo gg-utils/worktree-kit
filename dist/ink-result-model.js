@@ -113,4 +113,3 @@ export function WorktreeStackKit_buildInkResultModel(options) {
         createHandoff: null,
     };
 }
-//# sourceMappingURL=ink-result-model.js.map

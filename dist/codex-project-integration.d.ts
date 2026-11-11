@@ -61,4 +61,3 @@ export declare function WorktreeStackKit_printCodexProjectUsage(): void;
 export declare function WorktreeStackKit_parseCodexProjectCliArgs(argv: readonly string[]): WorktreeStackKit_CodexProjectCliOptions;
 /** CLI entrypoint that wires parsing to Codex config/state mutation. */
 export declare function WorktreeStackKit_runCodexProjectCli(argv: readonly string[], env?: NodeJS.ProcessEnv, homeDir?: string): number;
-//# sourceMappingURL=codex-project-integration.d.ts.map

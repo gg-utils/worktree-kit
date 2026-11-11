@@ -39,4 +39,3 @@ export type WorktreeStackKit_AlignActiveCommand = {
 /** Renders align-active CLI usage from project-supplied command lines. */
 export declare function WorktreeStackKit_renderAlignActiveUsage(config: WorktreeStackKit_AlignActiveCommandConfig): string;
 export declare function WorktreeStackKit_createAlignActiveCommand(config: WorktreeStackKit_AlignActiveCommandConfig): WorktreeStackKit_AlignActiveCommand;
-//# sourceMappingURL=align-active-command.d.ts.map

@@ -392,4 +392,3 @@ export function WorktreeStackKit_useOpenTuiAppController(options) {
         },
     };
 }
-//# sourceMappingURL=opentui-app-controller.js.map

@@ -73,7 +73,7 @@ const inventory: WorktreeStackKit_OpenTuiInventoryInput = {
   },
 };
 
-test("worktree OpenTUI serializers format worktree lists and selected details", () => {
+void test("worktree OpenTUI serializers format worktree lists and selected details", () => {
   assert.equal(
     WorktreeStackKit_serializeOpenTuiWorktreesList({ inventory }),
     "1. stack-a  ⚠ Issues  slot 1  feature/demo",
@@ -85,7 +85,7 @@ test("worktree OpenTUI serializers format worktree lists and selected details", 
   assert.match(detail, /Ports: ui=4011/);
 });
 
-test("worktree OpenTUI serializers format action and issue exports", () => {
+void test("worktree OpenTUI serializers format action and issue exports", () => {
   const actions = WorktreeStackKit_serializeOpenTuiActions({
     inventory,
     selectedRecord: record,

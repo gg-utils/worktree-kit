@@ -274,4 +274,3 @@ function WorktreeStackKit_handleOpenTuiNpmConfirmSelection(options) {
         options.props.setPhase(selectionPlan.nextPhase);
     }
 }
-//# sourceMappingURL=opentui-npm-panels.js.map

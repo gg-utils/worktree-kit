@@ -62,7 +62,7 @@ function createDiscoveryDependencies(options: {
   };
 }
 
-test("WorktreeStackKit_parseInkGitWorktreeList parses branch and detached entries", () => {
+void test("WorktreeStackKit_parseInkGitWorktreeList parses branch and detached entries", () => {
   const entries = WorktreeStackKit_parseInkGitWorktreeList(`worktree /repo/main
 HEAD abc123
 branch refs/heads/main
@@ -88,7 +88,7 @@ detached
   ]);
 });
 
-test("WorktreeStackKit_loadInkInventory preserves managed, health, and temporary merge records", async () => {
+void test("WorktreeStackKit_loadInkInventory preserves managed, health, and temporary merge records", async () => {
   const projectRoot = "/repo/worktrees/tooling-console";
   const metadataPath = `${projectRoot}/.tmp/worktree-stack/metadata.json`;
   const handbookJsonPath = `${projectRoot}/.tmp/worktree-stack/worktree-info.json`;
@@ -190,7 +190,7 @@ detached
   assert.equal(inventory.summary.unhealthyRealms, 1);
 });
 
-test("WorktreeStackKit_loadInkInventory treats canonical root entries as root identity", async () => {
+void test("WorktreeStackKit_loadInkInventory treats canonical root entries as root identity", async () => {
   const projectRoot = "/repo/worktrees/tooling-console";
   const canonicalRootPath = "/repo/main";
   const metadataPath = `${projectRoot}/.tmp/worktree-stack/metadata.json`;

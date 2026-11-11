@@ -48,4 +48,3 @@ export type WorktreeStackKit_BuildInkActionPlanOptions = WorktreeStackKit_InkAct
 export declare function WorktreeStackKit_buildInkActionPlan(options: WorktreeStackKit_BuildInkActionPlanOptions): WorktreeStackKit_InkUiActionRequestPlan;
 /** Binds a stable builder catalog once so script adapters only pass per-request UI state. */
 export declare function WorktreeStackKit_createInkActionPlanDispatcher(builders: WorktreeStackKit_InkActionPlanDispatcherBuilders): (options: WorktreeStackKit_InkActionPlanDispatcherInput) => WorktreeStackKit_InkUiActionRequestPlan;
-//# sourceMappingURL=ink-action-plan-dispatcher.d.ts.map

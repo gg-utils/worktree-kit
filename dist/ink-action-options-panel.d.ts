@@ -21,4 +21,3 @@ export declare function WorktreeStackKit_InkActionOptionsPanel({ actionDefinitio
     actionOptions: WorktreeStackKit_InkUiActionOptionState;
     poolNextStackEditMode: boolean;
 }): React.ReactNode;
-//# sourceMappingURL=ink-action-options-panel.d.ts.map

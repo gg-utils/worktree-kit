@@ -43,7 +43,7 @@ const npmScripts = {
   stateCheck: "worktrees:state:check",
 };
 
-test("OpenTUI global action-scroll visibility helpers match flow phases", () => {
+void test("OpenTUI global action-scroll visibility helpers match flow phases", () => {
   assert.equal(
     WorktreeStackKit_shouldShowOpenTuiStateCheckPanel({
       flow: "checkoutState",
@@ -77,7 +77,7 @@ test("OpenTUI global action-scroll visibility helpers match flow phases", () => 
   assert.equal(WorktreeStackKit_shouldShowOpenTuiResultPanel({ phase: "result" }), true);
 });
 
-test("OpenTUI global action-scroll options remain stable", () => {
+void test("OpenTUI global action-scroll options remain stable", () => {
   assert.deepEqual(WorktreeStackKit_buildOpenTuiStateCheckFetchOptions(), [
     { description: "Refresh refs", name: "yes", value: "yes" },
     { description: "Skip fetch", name: "no", value: "no" },
@@ -97,7 +97,7 @@ test("OpenTUI global action-scroll options remain stable", () => {
   ]);
 });
 
-test("OpenTUI checkout-state selection planners build npm preview plans", () => {
+void test("OpenTUI checkout-state selection planners build npm preview plans", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiStateCheckFetchSelection({ optionValue: "yes" }),
     { stateCheckFetch: true, type: "set-fetch" },
@@ -162,7 +162,7 @@ test("OpenTUI checkout-state selection planners build npm preview plans", () => 
   );
 });
 
-test("OpenTUI prune-stale and run-result planners map selections", () => {
+void test("OpenTUI prune-stale and run-result planners map selections", () => {
   assert.deepEqual(
     WorktreeStackKit_planOpenTuiPruneStaleFormSelection({
       npmScripts,
@@ -210,7 +210,7 @@ test("OpenTUI prune-stale and run-result planners map selections", () => {
   );
 });
 
-test("OpenTUI run/result text formatters preserve existing placeholders", () => {
+void test("OpenTUI run/result text formatters preserve existing placeholders", () => {
   assert.equal(
     WorktreeStackKit_formatOpenTuiRunningOutput({ runStderr: "err", runStdout: "out" }),
     "outerr",

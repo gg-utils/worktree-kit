@@ -403,4 +403,3 @@ export async function worktreeInteractiveRunEntryPoint(run) {
         session.close();
     }
 }
-//# sourceMappingURL=interactive-session.js.map

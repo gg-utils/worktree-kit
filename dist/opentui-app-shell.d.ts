@@ -38,4 +38,3 @@ export interface WorktreeStackKit_OpenTuiAppShellProps {
 }
 /** Renders the full OpenTUI worktree app shell around the active action-scroll panel. */
 export declare function WorktreeStackKit_OpenTuiAppShell(props: WorktreeStackKit_OpenTuiAppShellProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-app-shell.d.ts.map

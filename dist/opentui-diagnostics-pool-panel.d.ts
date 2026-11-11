@@ -52,4 +52,3 @@ export interface WorktreeStackKit_OpenTuiDiagnosticsAndPoolPanelProps {
 }
 /** Renders diagnostics npm submenu, realm-pool submenu, and pool-next stack name form. */
 export declare function WorktreeStackKit_OpenTuiDiagnosticsAndPoolPanel(props: WorktreeStackKit_OpenTuiDiagnosticsAndPoolPanelProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-diagnostics-pool-panel.d.ts.map

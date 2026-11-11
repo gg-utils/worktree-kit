@@ -120,3 +120,15 @@ Scripts currently expect the source-first workspace toolchain.
   must be supplied by the consuming repo.
 - Host side effects and subprocess execution remain adapter-owned unless explicitly injected.
 - The package depends on `@gg-utils/worktree-core` and `@gg-utils/env-materialize-core`.
+
+## Use from another repository
+
+Requires Node `>=22.0.0 <27`. Install the built JavaScript and declarations by tag:
+
+```json
+{"dependencies": {"@gg-utils/worktree-kit": "git+https://github.com/gg-utils/worktree-kit.git#v0.2.0"}}
+```
+
+### Remaining validation migration
+
+The existing strict TypeScript baseline and verbatim module syntax are enforced. Enabling exact optional properties and unchecked indexed access currently reports 36 diagnostics (TS2375: 12, TS2379: 9, TS2345: 6, TS2322: 4, TS2532: 3, TS18048: 2). `npm run check:strict` preserves that target. Type-checked ESLint reports 282 errors: floating promises 195, unsafe assignment 33, require-await 30, unused variables 16, redundant constituents 3, unsafe argument 3, unsafe return 1, base-to-string 1. These cross command adapters, process contracts and UI state; reviewing behavior-preserving fixes exceeds a day. Both checks run as advisory CI steps until that migration is complete; baseline type-check, tests and dist verification remain required.

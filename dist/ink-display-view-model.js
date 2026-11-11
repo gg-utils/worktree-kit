@@ -125,4 +125,3 @@ export function WorktreeStackKit_getInkCreateFieldDisplayValue(options) {
     }
     return String(value ?? "");
 }
-//# sourceMappingURL=ink-display-view-model.js.map

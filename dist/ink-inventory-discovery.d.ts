@@ -74,4 +74,3 @@ export declare function WorktreeStackKit_loadInkInventory(options: {
     readonly projectRoot: string;
     readonly dependencies: WorktreeStackKit_InkDiscoveryDependencies;
 }): Promise<WorktreeStackKit_InkUiInventory>;
-//# sourceMappingURL=ink-inventory-discovery.d.ts.map

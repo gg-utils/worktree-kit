@@ -45,4 +45,3 @@ export declare function WorktreeStackKit_runDevCompatibilityCli(options: {
     argv: readonly string[];
     config: WorktreeStackKit_DevCompatibilityConfig;
 }): number;
-//# sourceMappingURL=dev-compatibility.d.ts.map

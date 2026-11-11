@@ -81,4 +81,3 @@ export interface WorktreeStackKit_OpenTuiActionScrollBootstrapPanelProps extends
 }
 /** Renders platform bootstrap seed diagnostics and direct TSX preview/run navigation. */
 export declare function WorktreeStackKit_OpenTuiActionScrollBootstrapPanel(props: WorktreeStackKit_OpenTuiActionScrollBootstrapPanelProps): import("react").ReactNode;
-//# sourceMappingURL=opentui-maintenance-panels.d.ts.map

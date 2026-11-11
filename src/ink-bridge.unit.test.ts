@@ -24,7 +24,7 @@ import {
   WorktreeStackKit_startInkTaskProcess,
 } from "./ink-bridge.js";
 
-test("WorktreeStackKit_startInkTaskProcess captures stdout and stderr", async () => {
+void test("WorktreeStackKit_startInkTaskProcess captures stdout and stderr", async () => {
   const capturedLines: string[] = [];
   const startedAtValues: string[] = [];
   const run = WorktreeStackKit_startInkTaskProcess({
@@ -52,7 +52,7 @@ test("WorktreeStackKit_startInkTaskProcess captures stdout and stderr", async ()
   assert.equal(capturedLines.includes("stderr:hello from stderr"), true);
 });
 
-test("WorktreeStackKit_startInkTaskProcess reports failed and cancelled runs", async () => {
+void test("WorktreeStackKit_startInkTaskProcess reports failed and cancelled runs", async () => {
   const failedRun = WorktreeStackKit_startInkTaskProcess({
     projectRoot: process.cwd(),
     request: {
@@ -84,7 +84,7 @@ test("WorktreeStackKit_startInkTaskProcess reports failed and cancelled runs", a
   assert.equal(cancelledResult.status, "cancelled");
 });
 
-test("WorktreeStackKit_startInkRuntimeProcess tails fresh retained artifacts", async () => {
+void test("WorktreeStackKit_startInkRuntimeProcess tails fresh retained artifacts", async () => {
   const tempDir = await mkdtemp(join(tmpdir(), "worktree-kit-ink-runtime-"));
   const preflightLogPath = join(tempDir, "start-demo.preflight.log");
   const runtimeLogPath = join(tempDir, "latest.log");

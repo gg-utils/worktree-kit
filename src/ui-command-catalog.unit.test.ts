@@ -29,7 +29,7 @@ import {
   WorktreeStackKit_formatUiNpmRunCommand,
 } from "./ui-command-catalog.js";
 
-test("WorktreeStackKit_buildUiCreateArgs builds interactive create args", () => {
+void test("WorktreeStackKit_buildUiCreateArgs builds interactive create args", () => {
   assert.deepEqual(
     WorktreeStackKit_buildUiCreateArgs({
       baseBranch: "main",
@@ -66,7 +66,7 @@ test("WorktreeStackKit_buildUiCreateArgs builds interactive create args", () => 
   );
 });
 
-test("WorktreeStackKit_formatUiCommandPreview formats npm and tsx commands", () => {
+void test("WorktreeStackKit_formatUiCommandPreview formats npm and tsx commands", () => {
   assert.equal(
     WorktreeStackKit_formatUiNpmRunCommand({
       forwardedArgs: ["--worktree", "/tmp/my worktree"],
@@ -87,7 +87,7 @@ test("WorktreeStackKit_formatUiCommandPreview formats npm and tsx commands", () 
   );
 });
 
-test("WorktreeStackKit_buildOpenTuiCreateArgv validates and trims create forms", () => {
+void test("WorktreeStackKit_buildOpenTuiCreateArgv validates and trims create forms", () => {
   assert.deepEqual(
     WorktreeStackKit_buildOpenTuiCreateArgv({
       baseBranch: " main ",
@@ -130,7 +130,7 @@ test("WorktreeStackKit_buildOpenTuiCreateArgv validates and trims create forms",
   );
 });
 
-test("OpenTUI repair and sync builders split comma and newline path buffers", () => {
+void test("OpenTUI repair and sync builders split comma and newline path buffers", () => {
   assert.deepEqual(
     WorktreeStackKit_buildOpenTuiRepairArgv({
       dryRun: true,

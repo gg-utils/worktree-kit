@@ -58,7 +58,7 @@ import {
 } from "./ink-reducer-helpers.js";
 import { WorktreeStackKit_createInitialInkCreateDraft } from "./ink-create-model.js";
 
-test("WorktreeStackKit_createDefaultInkActionOptions returns stable defaults", () => {
+void test("WorktreeStackKit_createDefaultInkActionOptions returns stable defaults", () => {
   assert.deepEqual(WorktreeStackKit_createDefaultInkActionOptions(), {
     mergeExecutionMode: "plan",
     openWindsurfOnStart: false,
@@ -75,7 +75,7 @@ test("WorktreeStackKit_createDefaultInkActionOptions returns stable defaults", (
   });
 });
 
-test("load helper applies inventory lifecycle transitions", () => {
+void test("load helper applies inventory lifecycle transitions", () => {
   type DemoInventory = { readonly id: string };
   type DemoPlan = { readonly id: string };
   type DemoSession = { readonly id: string };
@@ -130,7 +130,7 @@ test("load helper applies inventory lifecycle transitions", () => {
   assert.equal(failed.resultModel, null);
 });
 
-test("launch target helper resets transient state and merges action options", () => {
+void test("launch target helper resets transient state and merges action options", () => {
   type DemoPlan = { readonly id: string };
   type DemoSession = { readonly id: string };
   type DemoResult = { readonly id: string };
@@ -198,7 +198,7 @@ test("launch target helper resets transient state and merges action options", ()
   assert.equal(launched.actionOptions.syncScope, "selected-record");
 });
 
-test("WorktreeStackKit_clampInkRecordIndex clamps to record bounds", () => {
+void test("WorktreeStackKit_clampInkRecordIndex clamps to record bounds", () => {
   assert.equal(
     WorktreeStackKit_clampInkRecordIndex({ index: 4, recordCount: 3 }),
     2,
@@ -213,13 +213,13 @@ test("WorktreeStackKit_clampInkRecordIndex clamps to record bounds", () => {
   );
 });
 
-test("WorktreeStackKit_clampInkActionIndex preserves the no-selection sentinel", () => {
+void test("WorktreeStackKit_clampInkActionIndex preserves the no-selection sentinel", () => {
   assert.equal(WorktreeStackKit_clampInkActionIndex(-1), -1);
   assert.equal(WorktreeStackKit_clampInkActionIndex(-2), 17);
   assert.equal(WorktreeStackKit_clampInkActionIndex(18), -1);
 });
 
-test("create section and field navigation follows catalog order", () => {
+void test("create section and field navigation follows catalog order", () => {
   assert.equal(WorktreeStackKit_clampInkCreateSectionIndex(-1), 0);
   assert.equal(WorktreeStackKit_clampInkCreateSectionIndex(99), 3);
   assert.deepEqual(
@@ -237,7 +237,7 @@ test("create section and field navigation follows catalog order", () => {
   );
 });
 
-test("WorktreeStackKit_stepInkCreateRegion rotates through the region ring", () => {
+void test("WorktreeStackKit_stepInkCreateRegion rotates through the region ring", () => {
   assert.equal(
     WorktreeStackKit_stepInkCreateRegion({ region: "fields", direction: 1 }),
     "editor",
@@ -248,7 +248,7 @@ test("WorktreeStackKit_stepInkCreateRegion rotates through the region ring", () 
   );
 });
 
-test("create navigation helper moves fields, sections, and regions", () => {
+void test("create navigation helper moves fields, sections, and regions", () => {
   const baseState: WorktreeStackKit_InkCreateNavigationState & {
     readonly marker: string;
   } = {
@@ -290,7 +290,7 @@ test("create navigation helper moves fields, sections, and regions", () => {
   assert.equal(nextRegion.createRegion, "fields");
 });
 
-test("shell navigation helper moves records, actions, and columns", () => {
+void test("shell navigation helper moves records, actions, and columns", () => {
   const baseState: WorktreeStackKit_InkShellNavigationState & {
     readonly marker: string;
   } = {
@@ -352,7 +352,7 @@ test("shell navigation helper moves records, actions, and columns", () => {
   assert.equal(leftFromEditor.focusedColumn, "actions");
 });
 
-test("shell navigation helper routes arrows by focused column", () => {
+void test("shell navigation helper routes arrows by focused column", () => {
   const recordFocused: WorktreeStackKit_InkShellNavigationState = {
     createInteractionMode: "browse",
     focusedColumn: "records",
@@ -386,7 +386,7 @@ test("shell navigation helper routes arrows by focused column", () => {
   assert.equal(nextAction.poolNextStackEditMode, false);
 });
 
-test("overlay helper opens review, records confirmation, and closes overlays", () => {
+void test("overlay helper opens review, records confirmation, and closes overlays", () => {
   type DemoPlan = { readonly id: string };
   type DemoSession = { readonly id: string };
   type DemoResult = { readonly id: string; readonly refreshRequested: boolean };
@@ -444,7 +444,7 @@ test("overlay helper opens review, records confirmation, and closes overlays", (
   assert.equal(closedReview.reviewConfirmationInput, "");
 });
 
-test("overlay helper shows results, protects sessions, and handles refresh requests", () => {
+void test("overlay helper shows results, protects sessions, and handles refresh requests", () => {
   type DemoPlan = { readonly id: string };
   type DemoSession = { readonly id: string };
   type DemoResult = { readonly id: string; readonly refreshRequested: boolean };
@@ -507,7 +507,7 @@ test("overlay helper shows results, protects sessions, and handles refresh reque
   assert.equal(refreshed.noticeMessage, null);
 });
 
-test("create field helper edits text fields and toggles booleans", () => {
+void test("create field helper edits text fields and toggles booleans", () => {
   const defaults = WorktreeStackKit_createInitialInkCreateDraft();
   const editing = WorktreeStackKit_applyInkCreateFieldAction({
     action: { type: "start-create-field-edit" },
@@ -581,7 +581,7 @@ test("create field helper edits text fields and toggles booleans", () => {
   assert.equal(fullStateEditing.marker, "full-state");
 });
 
-test("action option helpers toggle only the selected action's fields", () => {
+void test("action option helpers toggle only the selected action's fields", () => {
   const defaults = WorktreeStackKit_createDefaultInkActionOptions();
 
   assert.equal(
@@ -641,7 +641,7 @@ test("action option helpers toggle only the selected action's fields", () => {
   assert.equal(missingAction.actionOptions, defaults);
 });
 
-test("pool next stack helper edits only while realm-pool-next is selected", () => {
+void test("pool next stack helper edits only while realm-pool-next is selected", () => {
   const defaults = WorktreeStackKit_createDefaultInkActionOptions();
   const ignored = WorktreeStackKit_applyInkPoolNextStackAction({
     actionId: "repair",
@@ -692,7 +692,7 @@ test("pool next stack helper edits only while realm-pool-next is selected", () =
   assert.equal(fullStateEdited.marker, "full-state");
 });
 
-test("session helpers build queued sessions and apply telemetry", () => {
+void test("session helpers build queued sessions and apply telemetry", () => {
   const request = {
     command: "npm",
     args: ["run", "demo"],
@@ -745,7 +745,7 @@ test("session helpers build queued sessions and apply telemetry", () => {
   assert.equal(fullStateRunning.marker, "full-state");
 });
 
-test("blocked result helper returns stable blocked result defaults", () => {
+void test("blocked result helper returns stable blocked result defaults", () => {
   assert.deepEqual(
     WorktreeStackKit_createBlockedInkResult<{ text: string }, { id: string }>({
       message: "blocked",
@@ -765,7 +765,7 @@ test("blocked result helper returns stable blocked result defaults", () => {
   );
 });
 
-test("start session helper creates blocked results or queued sessions", () => {
+void test("start session helper creates blocked results or queued sessions", () => {
   type DemoRequest = {
     readonly args: readonly string[];
     readonly command: string;

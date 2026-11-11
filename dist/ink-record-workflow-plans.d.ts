@@ -102,4 +102,3 @@ export declare function WorktreeStackKit_buildInkMergePlan(options: {
     readonly inventory: WorktreeStackKit_InkUiInventory;
     readonly record: WorktreeStackKit_InkUiRecord | null;
 }): WorktreeStackKit_InkUiActionRequestPlan;
-//# sourceMappingURL=ink-record-workflow-plans.d.ts.map

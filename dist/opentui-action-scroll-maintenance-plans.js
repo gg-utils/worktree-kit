@@ -155,4 +155,3 @@ export function WorktreeStackKit_formatOpenTuiBootstrapPreviewText(options) {
         `  present: ${options.seedFacts.localLogicalEnvironmentPresent ? "yes" : "no"}`,
     ].join("\n");
 }
-//# sourceMappingURL=opentui-action-scroll-maintenance-plans.js.map

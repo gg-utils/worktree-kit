@@ -195,4 +195,3 @@ function WorktreeStackKit_getOpenTuiIssueTone(severity) {
 function WorktreeStackKit_formatBranch(branchRef) {
     return branchRef ? branchRef.replace("refs/heads/", "") : "detached";
 }
-//# sourceMappingURL=opentui-app-shell-view-model.js.map

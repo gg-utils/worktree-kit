@@ -187,4 +187,3 @@ export async function WorktreeStackKit_syncRepoRootTargetCheckoutWithLocks(optio
         worktreeStackReleaseRootMainSyncLock(rootDir, targetBranch);
     }
 }
-//# sourceMappingURL=repo-root-sync.js.map

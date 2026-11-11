@@ -14,7 +14,7 @@ import { jsxs as _jsxs, jsx as _jsx, Fragment as _Fragment } from "react/jsx-run
  * @see scripts/worktree-stack/ui/cli-ink/cli-ink-app-shell-views.tsx - Worktree-stack CLI Ink views that import the published `@gg-utils/worktree-kit/ink-shell` entrypoint alongside other shell slices.
  * @documentation reviewed=2026-05-23 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
  */
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Text, useStdout } from "ink";
 import { WorktreeStackKit_buildInkShellActionListModel, WorktreeStackKit_buildInkShellCombinedIssuesModel, WorktreeStackKit_buildInkShellDetailModel, WorktreeStackKit_buildInkShellHeaderSummary, WorktreeStackKit_buildInkShellLegendLines, WorktreeStackKit_buildInkShellOverviewModel, WorktreeStackKit_buildInkShellRecordRows, WorktreeStackKit_getInkShellSelectedRecord, } from "./ink-shell-view-model.js";
 import { WorktreeStackKit_buildInkFullscreenActionEditorModel, WorktreeStackKit_buildInkFullscreenCreateEditorModel, } from "./ink-fullscreen-view-model.js";
@@ -238,4 +238,3 @@ function InlineActionEditor({ actionDefinition, actionPlan, actionOptions, poolN
     });
     return (_jsxs(Box, { flexDirection: "column", children: [_jsxs(Text, { bold: true, color: "cyan", children: [actionDefinition.label, " ", _jsx(InkStatusBadge, { label: actionEditorModel.header.badgeLabel, tone: actionEditorModel.header.badgeTone })] }), _jsx(InkPanelSection, { title: "Target", children: _jsx(Text, { children: actionEditorModel.targetText }) }), _jsx(WorktreeStackKit_InkActionOptionsPanel, { actionDefinition: actionDefinition, actionOptions: actionOptions, poolNextStackEditMode: poolNextStackEditMode }), actionPlan.request ? (_jsx(InkPanelSection, { title: "Command Preview", children: _jsx(InkCommandPreview, { commandLine: actionEditorModel.commandPreview }) })) : null, _jsxs(InkPanelSection, { title: "Preflight Notes", children: [actionEditorModel.summaryLines.map((line) => (_jsxs(Text, { children: ["- ", line] }, line))), actionEditorModel.preflightIssues.length > 0 ? (actionEditorModel.preflightIssues.map(WorktreeStackKit_renderInkIssueLine)) : (_jsx(Text, { color: "gray", children: actionEditorModel.noIssuesText }))] })] }));
 }
-//# sourceMappingURL=ink-shell.js.map

@@ -109,4 +109,3 @@ export declare function WorktreeStackKit_runInteractiveMain(options: WorktreeSta
  * paths, npm script names, repo root, and default worktree base stay fixed to the adapter config.
  */
 export declare function WorktreeStackKit_bindInteractiveFlowRunners(options: WorktreeStackKit_BindInteractiveFlowRunnersOptions): WorktreeStackKit_BoundInteractiveFlowRunners;
-//# sourceMappingURL=interactive-flows.d.ts.map

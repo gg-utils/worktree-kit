@@ -487,4 +487,3 @@ export declare function WorktreeStackKit_applyInkStartSessionAction<TRequest ext
     readonly state: WorktreeStackKit_InkStartSessionState<TPlan, TRequest, TLine, TResult>;
 }): WorktreeStackKit_InkStartSessionState<TPlan, TRequest, TLine, TResult | WorktreeStackKit_InkBlockedResult<TLine, THandoff>>;
 export {};
-//# sourceMappingURL=ink-reducer-helpers.d.ts.map
